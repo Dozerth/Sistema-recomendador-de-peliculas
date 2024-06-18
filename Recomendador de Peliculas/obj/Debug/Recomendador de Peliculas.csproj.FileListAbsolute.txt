@@ -1,0 +1,27 @@
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\Recomendador de Peliculas.exe.config
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\Recomendador de Peliculas.exe
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\Recomendador de Peliculas.pdb
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.csproj.AssemblyReference.cache
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador_de_Peliculas.MainForm.resources
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador_de_Peliculas.Properties.Resources.resources
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.csproj.GenerateResource.cache
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.exe
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.pdb
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador_de_Peliculas.UI.FormTemplate.resources
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.csproj.CopyComplete
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\MySql.Data.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\Google.Protobuf.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\ZstdNet.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\System.Memory.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\System.Buffers.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\bin\Debug\MySql.Data.xml
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador de Peliculas.exe.config
+C:\Users\Alejandro C\Documents\PP-G\Visual Studio\C#\Sistema\Recomendador de peliculas\Recomendador de Peliculas\Recomendador de Peliculas\obj\Debug\Recomendador_de_Peliculas.UI.UCPelicula.resources
