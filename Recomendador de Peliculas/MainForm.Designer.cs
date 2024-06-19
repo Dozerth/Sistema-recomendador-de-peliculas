@@ -37,9 +37,9 @@
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPeli = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelLateral.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelContainer.SuspendLayout();
@@ -175,6 +175,24 @@
             this.panelContainer.Size = new System.Drawing.Size(660, 430);
             this.panelContainer.TabIndex = 2;
             // 
+            // flowLayoutPeli
+            // 
+            this.flowLayoutPeli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPeli.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPeli.Location = new System.Drawing.Point(59, 167);
+            this.flowLayoutPeli.Name = "flowLayoutPeli";
+            this.flowLayoutPeli.Size = new System.Drawing.Size(490, 136);
+            this.flowLayoutPeli.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(42, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(571, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(402, 385);
@@ -184,24 +202,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(13, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(571, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // flowLayoutPeli
-            // 
-            this.flowLayoutPeli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.flowLayoutPeli.Location = new System.Drawing.Point(13, 40);
-            this.flowLayoutPeli.Name = "flowLayoutPeli";
-            this.flowLayoutPeli.Size = new System.Drawing.Size(640, 329);
-            this.flowLayoutPeli.TabIndex = 3;
             // 
             // MainForm
             // 
