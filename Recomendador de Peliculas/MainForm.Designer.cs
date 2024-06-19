@@ -180,7 +180,7 @@
             this.flowLayoutPeli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPeli.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPeli.BackColor = System.Drawing.Color.Aqua;
             this.flowLayoutPeli.Location = new System.Drawing.Point(59, 167);
             this.flowLayoutPeli.Name = "flowLayoutPeli";
             this.flowLayoutPeli.Size = new System.Drawing.Size(490, 136);
