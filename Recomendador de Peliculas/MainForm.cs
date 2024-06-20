@@ -236,8 +236,12 @@ namespace Recomendador_de_Peliculas
             pelicula.lblNombrePeli.Text = "Esta es mi peli";
             pelicula.Width = 200;
             pelicula.Height = 200;
+            flowLayout_ultimaspeli.Controls.Add(pelicula);
+        }
 
-            flowLayoutPeli.Controls.Add(pelicula);
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

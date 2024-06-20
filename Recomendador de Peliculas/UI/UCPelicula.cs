@@ -22,6 +22,10 @@ namespace Recomendador_de_Peliculas.UI
             this.BackColor = fondo;
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Template_Video open = new Template_Video();
+            open.ShowDialog();
+        }
     }
 }

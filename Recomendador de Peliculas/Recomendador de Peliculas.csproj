@@ -72,6 +72,12 @@
     <Compile Include="UI\FormTemplate.Designer.cs">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Template_Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Template_Video.Designer.cs">
+      <DependentUpon>Template_Video.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UCPelicula.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="UI\FormTemplate.resx">
       <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Template_Video.resx">
+      <DependentUpon>Template_Video.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UCPelicula.resx">
       <DependentUpon>UCPelicula.cs</DependentUpon>

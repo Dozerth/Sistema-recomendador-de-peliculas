@@ -34,17 +34,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 3);
+            this.button1.Location = new System.Drawing.Point(13, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(251, 99);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblNombrePeli
             // 
             this.lblNombrePeli.AutoSize = true;
-            this.lblNombrePeli.Location = new System.Drawing.Point(24, 124);
+            this.lblNombrePeli.Location = new System.Drawing.Point(43, 169);
             this.lblNombrePeli.Name = "lblNombrePeli";
             this.lblNombrePeli.Size = new System.Drawing.Size(89, 13);
             this.lblNombrePeli.TabIndex = 2;
