@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Recomendador_de_Peliculas.UI;
 
 namespace Recomendador_de_Peliculas.UI
 {
@@ -22,10 +23,18 @@ namespace Recomendador_de_Peliculas.UI
             this.BackColor = fondo;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            Template_Video open = new Template_Video();
-            open.ShowDialog();
+                       
+        }
+
+        private void pictureBox_impeli_Click(object sender, EventArgs e)
+        {
+            MainForm formPrincial = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.OpenChildForm<Template_Video>();
+            }
         }
     }
 }

@@ -72,6 +72,18 @@
     <Compile Include="UI\FormTemplate.Designer.cs">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Template_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Template_Category.Designer.cs">
+      <DependentUpon>Template_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Template_Qualification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Template_Qualification.Designer.cs">
+      <DependentUpon>Template_Qualification.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Template_Video.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </Compile>
     <EmbeddedResource Include="UI\FormTemplate.resx">
       <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Template_Category.resx">
+      <DependentUpon>Template_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Template_Qualification.resx">
+      <DependentUpon>Template_Qualification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Template_Video.resx">
       <DependentUpon>Template_Video.cs</DependentUpon>

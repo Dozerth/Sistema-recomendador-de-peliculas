@@ -31,7 +31,7 @@ namespace Recomendador_de_Peliculas
             //Border buttons
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 50);
-            panelLateral.Controls.Add(leftBorderBtn);
+            //panelLateral.Controls.Add(leftBorderBtn);
 
             //Handle working area - resize
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -57,25 +57,25 @@ namespace Recomendador_de_Peliculas
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2;
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17;
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
+        //protected override void WndProc(ref Message m)
+        //{
+        //    if (m.Msg == 0x84)
+        //    {
+        //        Point pos = new Point(m.LParam.ToInt32());
+        //        pos = this.PointToClient(pos);
+        //        if (pos.Y < cCaption)
+        //        {
+        //            m.Result = (IntPtr)2;
+        //            return;
+        //        }
+        //        if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+        //        {
+        //            m.Result = (IntPtr)17;
+        //            return;
+        //        }
+        //    }
+        //    base.WndProc(ref m);
+        //}
 
 
 
@@ -116,45 +116,45 @@ namespace Recomendador_de_Peliculas
             }
         }
 
-        private void ActivateButton(object senderBtn, Color color)
-        {
-            if (senderBtn != null)
-            {
-                DisableButton();
-                //Button
-                currentButton = (IconButton)senderBtn; //IconButton has to be imported from (FontAwesome Library)
-                currentButton.BackColor = RGBColors.MainButtonsActive;
-                currentButton.ForeColor = color;
-                currentButton.TextAlign = ContentAlignment.MiddleLeft;
-                currentButton.IconColor = color;
-                currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentButton.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
-                leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
-            }
-        }
+        //private void ActivateButton(object senderBtn, Color color)
+        //{
+        //    if (senderBtn != null)
+        //    {
+        //        DisableButton();
+        //        //Button
+        //        currentButton = (IconButton)senderBtn; //IconButton has to be imported from (FontAwesome Library)
+        //        currentButton.BackColor = RGBColors.MainButtonsActive;
+        //        currentButton.ForeColor = color;
+        //        currentButton.TextAlign = ContentAlignment.MiddleLeft;
+        //        currentButton.IconColor = color;
+        //        currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
+        //        currentButton.ImageAlign = ContentAlignment.MiddleRight;
+        //        //Left border button
+        //        leftBorderBtn.BackColor = color;
+        //        leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
+        //        leftBorderBtn.Visible = true;
+        //        leftBorderBtn.BringToFront();
+        //    }
+        //}
 
-        private void DisableButton()
-        {
-            if (currentButton != null)
-            {
-                currentButton.BackColor = RGBColors.MainButtonsDefault;
-                currentButton.ForeColor = Color.Gainsboro;
-                currentButton.TextAlign = ContentAlignment.MiddleLeft;
-                currentButton.IconColor = Color.Gainsboro;
-                currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentButton.ImageAlign = ContentAlignment.MiddleRight;
-                leftBorderBtn.Visible = false; //Testing for piclogo click
-            }
-        }
+        //private void DisableButton()
+        //{
+        //    if (currentButton != null)
+        //    {
+        //        currentButton.BackColor = RGBColors.MainButtonsDefault;
+        //        currentButton.ForeColor = Color.Gainsboro;
+        //        currentButton.TextAlign = ContentAlignment.MiddleLeft;
+        //        currentButton.IconColor = Color.Gainsboro;
+        //        currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
+        //        currentButton.ImageAlign = ContentAlignment.MiddleRight;
+        //        leftBorderBtn.Visible = false; //Testing for piclogo click
+        //    }
+        //}
 
         #endregion
 
         #region Child forms control
-        private void OpenChildForm<MyForm>() where MyForm : Form, new()
+        public void OpenChildForm<MyForm>() where MyForm : Form, new()
         {
             Form externalChildForm;
             externalChildForm = panelContainer.Controls.OfType<MyForm>().FirstOrDefault();
@@ -188,7 +188,7 @@ namespace Recomendador_de_Peliculas
             
             //CODE
             //ShowSubMenu(panelSessions);
-            ActivateButton(sender, RGBColors.MainButtonsLettersActive);
+            //ActivateButton(sender, RGBColors.MainButtonsLettersActive);
         }
 
         private void ExampleToCallForms(object sender, EventArgs e)
@@ -228,20 +228,103 @@ namespace Recomendador_de_Peliculas
         }
 
         #endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UCPelicula pelicula = new UCPelicula();
-            pelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
-            pelicula.lblNombrePeli.Text = "Esta es mi peli";
-            pelicula.Width = 200;
-            pelicula.Height = 200;
-            flowLayout_ultimaspeli.Controls.Add(pelicula);
-        }
-
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            UCPelicula pelicula = new UCPelicula();
+            pelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
+            pelicula.lblNombrePeli.Text = "Intensamente 2";
+            pelicula.Width = 216;
+            pelicula.Height = 291;
+            pelicula.Margin = new Padding(10);
+            flowLayoutultimapelis.Controls.Add(pelicula);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            flowLayout_categorias.Margin = new Padding(10);
+            flowLayout_categorias.VerticalScroll.Visible = false;
+            string html = "<html><head>";
+            html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
+            html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='975' height='360' frameborder='0' allowfullscreen></iframe>";
+            html += "</head></html>";
+            string video1 = "https://www.youtube.com/watch?v=I0_qFoptZ4Y";
+            string video2 = "https://www.youtube.com/watch?v=xiC2iXTXHxw";
+            this.web_video_Principal1.DocumentText = string.Format(html, video1.Split('=')[1]);
+            this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);
+            flowLayoutPeli.HorizontalScroll.Visible = false;
+            flowLayoutPeli.VerticalScroll.Visible = false;
+        }
+
+        #region Buttons_Actions
+        private void Btn_animacion_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Animación";
+            }
+        }
+
+        private void Btn_Aventura_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Aventura";
+            }
+        }
+
+        private void Btn_Accion_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Acción";
+            }
+        }
+
+        private void btn_comedia_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Comedia";
+            }
+        }
+
+        private void btn_cienciaficion_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Ciencia Ficción";
+            }
+        }
+
+        private void btn_fantasia_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Template_Category>();
+            Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
+            if (formPrincial != null)
+            {
+                formPrincial.lb_category_name.Text = "Peliculas de Fantasía";
+            }
+        }
+
+        #endregion
+
+        private void flowLayoutPeli_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
