@@ -32,10 +32,10 @@
             this.lblNombrePeli = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.icono_recomend = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBox_impeli = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono_recomend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_impeli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,20 +73,20 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "2024";
             // 
-            // iconPictureBox1
+            // icono_recomend
             // 
-            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.icono_recomend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Sun;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Window;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(184, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 4;
-            this.iconPictureBox1.TabStop = false;
+            this.icono_recomend.BackColor = System.Drawing.Color.Orange;
+            this.icono_recomend.ForeColor = System.Drawing.SystemColors.Window;
+            this.icono_recomend.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.icono_recomend.IconColor = System.Drawing.SystemColors.Window;
+            this.icono_recomend.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icono_recomend.Location = new System.Drawing.Point(184, 0);
+            this.icono_recomend.Name = "icono_recomend";
+            this.icono_recomend.Size = new System.Drawing.Size(32, 32);
+            this.icono_recomend.TabIndex = 4;
+            this.icono_recomend.TabStop = false;
             // 
             // pictureBox_impeli
             // 
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.icono_recomend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombrePeli);
             this.Controls.Add(this.pictureBox_impeli);
@@ -111,7 +111,7 @@
             this.Size = new System.Drawing.Size(216, 291);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono_recomend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_impeli)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,7 +122,7 @@
         public System.Windows.Forms.Label lblNombrePeli;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox icono_recomend;
         private System.Windows.Forms.PictureBox pictureBox_impeli;
     }
 }

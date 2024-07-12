@@ -72,6 +72,18 @@
     <Compile Include="UI\FormTemplate.Designer.cs">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sign _in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sign _in.Designer.cs">
+      <DependentUpon>Sign _in.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Template_Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="UI\Template_Qualification.Designer.cs">
       <DependentUpon>Template_Qualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Template_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Template_Search.Designer.cs">
+      <DependentUpon>Template_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Template_Video.cs">
       <SubType>Form</SubType>
@@ -111,11 +129,20 @@
     <EmbeddedResource Include="UI\FormTemplate.resx">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sign _in.resx">
+      <DependentUpon>Sign _in.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Template_Category.resx">
       <DependentUpon>Template_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Template_Qualification.resx">
       <DependentUpon>Template_Qualification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Template_Search.resx">
+      <DependentUpon>Template_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Template_Video.resx">
       <DependentUpon>Template_Video.cs</DependentUpon>

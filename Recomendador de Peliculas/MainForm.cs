@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Recomendador_de_Peliculas.UI;
 
 namespace Recomendador_de_Peliculas
 {
@@ -38,6 +39,7 @@ namespace Recomendador_de_Peliculas
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+        Template_Search open = new Template_Search();
 
         #region Structures
         private struct RGBColors
@@ -247,7 +249,6 @@ namespace Recomendador_de_Peliculas
         private void MainForm_Load(object sender, EventArgs e)
         {
             flowLayout_categorias.Margin = new Padding(10);
-            flowLayout_categorias.VerticalScroll.Visible = false;
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
             html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='975' height='360' frameborder='0' allowfullscreen></iframe>";
@@ -255,9 +256,7 @@ namespace Recomendador_de_Peliculas
             string video1 = "https://www.youtube.com/watch?v=I0_qFoptZ4Y";
             string video2 = "https://www.youtube.com/watch?v=xiC2iXTXHxw";
             this.web_video_Principal1.DocumentText = string.Format(html, video1.Split('=')[1]);
-            this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);
-            flowLayoutPeli.HorizontalScroll.Visible = false;
-            flowLayoutPeli.VerticalScroll.Visible = false;
+            //this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);      
         }
 
         #region Buttons_Actions
@@ -325,6 +324,18 @@ namespace Recomendador_de_Peliculas
 
         private void flowLayoutPeli_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

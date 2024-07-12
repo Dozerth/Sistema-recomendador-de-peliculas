@@ -80,15 +80,20 @@
             // 
             // btn_exit
             // 
+            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.FlatAppearance.BorderSize = 0;
+            this.btn_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(53)))), ((int)(((byte)(179)))));
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btn_exit.IconColor = System.Drawing.Color.Black;
+            this.btn_exit.IconColor = System.Drawing.SystemColors.Window;
             this.btn_exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_exit.IconSize = 30;
             this.btn_exit.Location = new System.Drawing.Point(27, 19);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(70, 35);
             this.btn_exit.TabIndex = 4;
-            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // label2
@@ -136,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(22)))), ((int)(((byte)(58)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1449, 789);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
