@@ -356,14 +356,14 @@ namespace Recomendador_de_Peliculas
             Random rnd = new Random();
             foreach (MoviesDTO pelicula in peliculas)
             {
-                if (recommended = false && rnd.Next(0,6) == 4) { recommended = true; } 
+                if (recommended == false && rnd.Next(0,11) == 4) { recommended = true; } 
                 UCPelicula ucPelicula = new UCPelicula();
                 ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
                 ucPelicula.lblNombrePeli.Text = pelicula.Title;
-                ucPelicula.lblAnio.Text = pelicula.Year;
+                ucPelicula.lblAnio.Text = pelicula.Year;                
+                ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
                 ucPelicula.iconRecomendado.Visible = recommended;
                 ucPelicula.iconRecomendado.BringToFront();
-                ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
                 ucPelicula.Width = 216;
                 ucPelicula.Height = 291;
                 ucPelicula.Margin = new Padding(12);
