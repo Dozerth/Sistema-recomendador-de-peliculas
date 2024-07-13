@@ -171,6 +171,49 @@ namespace Recomendador_de_Peliculas.DAO
             return movies;
         }
 
+        public List<MoviesDTO> RetrieveMoviesByYear(int year, int limit)
+        {
+            List<MoviesDTO> movies = new List<MoviesDTO>();
+            try
+            {
+                connection.Open();
+
+                string consult = "SELECT * FROM peliculas WHERE fecha >= @Year LIMIT @Limit";
+
+                //CONFIGURING COMMAND
+                cmd.Connection = connection;
+                cmd.Parameters.Clear();
+                cmd.CommandText = consult;
+                cmd.Parameters.AddWithValue("@Year", year);
+                cmd.Parameters.AddWithValue("@Limit", limit);
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        movies.Add(new MoviesDTO
+                        {
+                            ID = reader.GetInt32(0),
+                            Title = reader.GetString(1),
+                            Year = reader.GetString(2),
+                            Link = reader.GetString(3),
+                            Image = reader.GetString(4)
+                        });
+                    }
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return movies;
+        }
+
         #endregion
 
         #region Update
