@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Recomendador_de_Peliculas.UI;
+using Recomendador_de_Peliculas.DAO;
+using Recomendador_de_Peliculas.DTO;
 
 namespace Recomendador_de_Peliculas
 {
@@ -23,6 +25,15 @@ namespace Recomendador_de_Peliculas
         private Form currentChildForm = null;
         private const int cGrip = 16;
         private const int cCaption = 32;
+        private string YOUTUBE_BASE_PATH = "https://www.youtube.com/watch?v";
+        private string CURRENT_DIRECTORY = System.IO.Directory.GetCurrentDirectory();
+        private string IMAGES_BASE_PATH = "../../../Recursos/Images/";
+        Template_Search open = new Template_Search();
+
+        //Private fields for MySQL queries
+        private MoviesDAO moviesDAO = new MoviesDAO();
+
+
 
         //NOTE: autoscroll on main form is active, it´s for testing purposes
         public MainForm()
@@ -38,8 +49,10 @@ namespace Recomendador_de_Peliculas
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
-        Template_Search open = new Template_Search();
+
+            //Load movies per genre in the system
+            LoadLastMovies();
+        }        
 
         #region Structures
         private struct RGBColors
@@ -324,6 +337,25 @@ namespace Recomendador_de_Peliculas
 
         private void flowLayoutPeli_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void LoadLastMovies()
+        {
+            List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByGenre(1, 10);
+
+            foreach(MoviesDTO pelicula in peliculas)
+            {
+                UCPelicula ucPelicula = new UCPelicula();
+                ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
+                ucPelicula.lblNombrePeli.Text = pelicula.Title;
+                ucPelicula.lblAnio.Text = pelicula.Year;
+                ucPelicula.iconRecomendado.Visible = false;
+                ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
+                ucPelicula.Width = 216;
+                ucPelicula.Height = 291;
+                ucPelicula.Margin = new Padding(12);
+                flowLayoutultimapelis.Controls.Add(ucPelicula);
+            }            
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

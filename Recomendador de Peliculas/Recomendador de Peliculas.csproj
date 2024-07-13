@@ -59,7 +59,9 @@
   <ItemGroup>
     <Compile Include="Common\UserLoginCache.cs" />
     <Compile Include="DAO\ConnectionDB.cs" />
+    <Compile Include="DAO\MoviesDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DTO\MoviesDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
