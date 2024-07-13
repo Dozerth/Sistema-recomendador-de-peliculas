@@ -79,10 +79,11 @@
             this.iconRecomendado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iconRecomendado.BackColor = System.Drawing.Color.Orange;
+            this.iconRecomendado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconRecomendado.BackgroundImage")));
             this.iconRecomendado.ForeColor = System.Drawing.SystemColors.Window;
-            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconRecomendado.IconColor = System.Drawing.SystemColors.Window;
-            this.iconRecomendado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconRecomendado.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconRecomendado.Location = new System.Drawing.Point(184, 0);
             this.iconRecomendado.Name = "iconRecomendado";
             this.iconRecomendado.Size = new System.Drawing.Size(32, 32);
