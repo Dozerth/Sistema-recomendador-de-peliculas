@@ -15,6 +15,7 @@ using Recomendador_de_Peliculas.UI;
 using Recomendador_de_Peliculas.DAO;
 using Recomendador_de_Peliculas.DTO;
 using Recomendador_de_Peliculas.Business;
+using Recomendador_de_Peliculas.Common;
 
 namespace Recomendador_de_Peliculas
 {
@@ -45,6 +46,7 @@ namespace Recomendador_de_Peliculas
 
             //Load movies per genre in the system
             LoadMainMovies();
+            movies.LoadMoviesOnCache();
         }        
 
         #region Structures
@@ -167,6 +169,7 @@ namespace Recomendador_de_Peliculas
         #region Buttons_Actions
         private void Btn_animacion_Click(object sender, EventArgs e)
         {
+            MovieCache.CategorySearch = 1;
             OpenChildForm<Template_Category>();
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
@@ -177,6 +180,7 @@ namespace Recomendador_de_Peliculas
 
         private void Btn_Aventura_Click(object sender, EventArgs e)
         {
+            MovieCache.CategorySearch = 4;
             OpenChildForm<Template_Category>();
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
@@ -187,6 +191,7 @@ namespace Recomendador_de_Peliculas
 
         private void Btn_Accion_Click(object sender, EventArgs e)
         {
+            MovieCache.CategorySearch = 7;
             OpenChildForm<Template_Category>();
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
@@ -197,6 +202,7 @@ namespace Recomendador_de_Peliculas
 
         private void btn_comedia_Click(object sender, EventArgs e)
         {
+            MovieCache.CategorySearch = 5;
             OpenChildForm<Template_Category>();
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
@@ -207,6 +213,7 @@ namespace Recomendador_de_Peliculas
 
         private void btn_cienciaficion_Click(object sender, EventArgs e)
         {
+            MovieCache.CategorySearch = 6;
             OpenChildForm<Template_Category>();
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
@@ -217,7 +224,8 @@ namespace Recomendador_de_Peliculas
 
         private void btn_fantasia_Click(object sender, EventArgs e)
         {
-            OpenChildForm<Template_Category>();
+            MovieCache.CategorySearch = 8;
+            OpenChildForm<Template_Category>();            
             Template_Category formPrincial = Application.OpenForms.OfType<Template_Category>().FirstOrDefault();
             if (formPrincial != null)
             {
