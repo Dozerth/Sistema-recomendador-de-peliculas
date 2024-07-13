@@ -208,7 +208,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(118, 618);
+            this.label1.Location = new System.Drawing.Point(96, 618);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 209;
@@ -224,7 +224,7 @@
             this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Window;
-            this.label18.Location = new System.Drawing.Point(227, 614);
+            this.label18.Location = new System.Drawing.Point(215, 614);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(112, 21);
             this.label18.TabIndex = 208;
@@ -325,11 +325,11 @@
             this.Btn_Entrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Entrar.IconSize = 25;
             this.Btn_Entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Entrar.Location = new System.Drawing.Point(164, 559);
+            this.Btn_Entrar.Location = new System.Drawing.Point(135, 559);
             this.Btn_Entrar.Name = "Btn_Entrar";
-            this.Btn_Entrar.Size = new System.Drawing.Size(137, 38);
+            this.Btn_Entrar.Size = new System.Drawing.Size(177, 38);
             this.Btn_Entrar.TabIndex = 200;
-            this.Btn_Entrar.Text = "ENTRAR";
+            this.Btn_Entrar.Text = "REGISTRARSE";
             this.Btn_Entrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Entrar.UseVisualStyleBackColor = false;
             // 
