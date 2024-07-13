@@ -15,6 +15,7 @@ namespace Recomendador_de_Peliculas.Common
         static string _Actors;
         static string _Description;
         static bool _Recommended;
+        static int _CategorySearch;
 
         public static string Title { get => _Title; set => _Title = value; }
         public static string Year { get => _Year; set => _Year = value; }
@@ -23,5 +24,6 @@ namespace Recomendador_de_Peliculas.Common
         public static string Actors { get => _Actors; set => _Actors = value; }
         public static string Description { get => _Description; set => _Description = value; }
         public static bool Recommended { get => _Recommended; set => _Recommended = value; }
+        public static int CategorySearch { get => _CategorySearch; set => _CategorySearch = value; }
     }
 }
