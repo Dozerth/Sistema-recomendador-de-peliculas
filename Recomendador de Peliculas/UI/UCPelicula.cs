@@ -23,6 +23,11 @@ namespace Recomendador_de_Peliculas.UI
             this.BackColor = fondo;
         }
 
+        public void CambiarImagen(string ruta)
+        {
+            this.pictureBox_impeli.Load(ruta);
+        }
+
         public void button1_Click(object sender, EventArgs e)
         {
                        

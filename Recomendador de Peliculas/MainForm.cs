@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Recomendador_de_Peliculas.UI;
+using Recomendador_de_Peliculas.DAO;
+using Recomendador_de_Peliculas.DTO;
 
 namespace Recomendador_de_Peliculas
 {
@@ -22,6 +25,15 @@ namespace Recomendador_de_Peliculas
         private Form currentChildForm = null;
         private const int cGrip = 16;
         private const int cCaption = 32;
+        private string YOUTUBE_BASE_PATH = "https://www.youtube.com/watch?v";
+        private string CURRENT_DIRECTORY = System.IO.Directory.GetCurrentDirectory();
+        private string IMAGES_BASE_PATH = "../../../Recursos/Images/";
+        Template_Search open = new Template_Search();
+
+        //Private fields for MySQL queries
+        private MoviesDAO moviesDAO = new MoviesDAO();
+
+
 
         //NOTE: autoscroll on main form is active, it´s for testing purposes
         public MainForm()
@@ -37,7 +49,10 @@ namespace Recomendador_de_Peliculas
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
+
+            //Load movies per genre in the system
+            LoadMainMovies();
+        }        
 
         #region Structures
         private struct RGBColors
@@ -247,7 +262,6 @@ namespace Recomendador_de_Peliculas
         private void MainForm_Load(object sender, EventArgs e)
         {
             flowLayout_categorias.Margin = new Padding(10);
-            flowLayout_categorias.VerticalScroll.Visible = false;
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
             html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='975' height='360' frameborder='0' allowfullscreen></iframe>";
@@ -255,9 +269,7 @@ namespace Recomendador_de_Peliculas
             string video1 = "https://www.youtube.com/watch?v=I0_qFoptZ4Y";
             string video2 = "https://www.youtube.com/watch?v=xiC2iXTXHxw";
             this.web_video_Principal1.DocumentText = string.Format(html, video1.Split('=')[1]);
-            this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);
-            flowLayoutPeli.HorizontalScroll.Visible = false;
-            flowLayoutPeli.VerticalScroll.Visible = false;
+            //this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);      
         }
 
         #region Buttons_Actions
@@ -325,6 +337,50 @@ namespace Recomendador_de_Peliculas
 
         private void flowLayoutPeli_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void LoadMainMovies()
+        {
+            List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByYear(2024, 10);
+            LoadMoviesInPanel(flowLayoutultimapelis, peliculas);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(4, 10);
+            LoadMoviesInPanel(panelRecomendados, peliculas, true);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(1, 10);
+            LoadMoviesInPanel(panelAnimacion, peliculas);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(2, 10);
+            LoadMoviesInPanel(panelFamilia, peliculas);
+        }
+
+        private void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas, bool recommended = false)
+        {
+            Random rnd = new Random();
+            foreach (MoviesDTO pelicula in peliculas)
+            {
+                if (recommended == false && rnd.Next(0,11) == 4) { recommended = true; } 
+                UCPelicula ucPelicula = new UCPelicula();
+                ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
+                ucPelicula.lblNombrePeli.Text = pelicula.Title;
+                ucPelicula.lblAnio.Text = pelicula.Year;                
+                ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
+                ucPelicula.iconRecomendado.Visible = recommended;
+                ucPelicula.iconRecomendado.BringToFront();
+                ucPelicula.Width = 216;
+                ucPelicula.Height = 291;
+                ucPelicula.Margin = new Padding(12);
+                panel.Controls.Add(ucPelicula);
+            }
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

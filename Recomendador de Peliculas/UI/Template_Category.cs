@@ -22,8 +22,8 @@ namespace Recomendador_de_Peliculas.UI
             UCPelicula pelicula = new UCPelicula();
             pelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
             pelicula.lblNombrePeli.Text = "Esta es mi peli";
-            pelicula.Width = 220;
-            pelicula.Height = 265;
+            pelicula.Width = 216;
+            pelicula.Height = 291;
             pelicula.Margin = new Padding(12);
             flowLayoutAnimacion.Controls.Add(pelicula);
         }
