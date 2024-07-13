@@ -144,7 +144,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iconRecomendado.BackColor = System.Drawing.Color.Orange;
             this.iconRecomendado.ForeColor = System.Drawing.SystemColors.Window;
-            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconRecomendado.IconColor = System.Drawing.SystemColors.Window;
             this.iconRecomendado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconRecomendado.Location = new System.Drawing.Point(183, 0);
