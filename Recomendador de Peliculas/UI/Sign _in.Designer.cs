@@ -150,7 +150,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(118, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 16);
+            this.label3.Size = new System.Drawing.Size(126, 16);
             this.label3.TabIndex = 214;
             this.label3.Text = "Nombre de Usuario";
             // 
@@ -168,6 +168,8 @@
             this.txt_email.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_email.Size = new System.Drawing.Size(231, 32);
             this.txt_email.TabIndex = 212;
+            this.txt_email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_email_KeyPress);
+            this.txt_email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_email_Validating);
             // 
             // label2
             // 
@@ -177,7 +179,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
             this.label2.Location = new System.Drawing.Point(121, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 211;
             this.label2.Text = "Correo Electronico";
             // 
@@ -210,7 +212,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(96, 618);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 209;
             this.label1.Text = "Ya Tengo Cuenta";
             // 
@@ -247,6 +249,8 @@
             this.TxtPassword.Size = new System.Drawing.Size(231, 32);
             this.TxtPassword.TabIndex = 199;
             this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // TxtUser
             // 
@@ -262,6 +266,7 @@
             this.TxtUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtUser.Size = new System.Drawing.Size(231, 32);
             this.TxtUser.TabIndex = 204;
+            this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // checkBox1
             // 
@@ -274,6 +279,7 @@
             this.checkBox1.TabIndex = 206;
             this.checkBox1.Text = "Ver Contraseña";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label19
             // 
@@ -283,7 +289,7 @@
             this.label19.ForeColor = System.Drawing.SystemColors.Window;
             this.label19.Location = new System.Drawing.Point(121, 416);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 16);
+            this.label19.Size = new System.Drawing.Size(77, 16);
             this.label19.TabIndex = 203;
             this.label19.Text = "Contraseña";
             // 
@@ -295,7 +301,7 @@
             this.label20.ForeColor = System.Drawing.SystemColors.Window;
             this.label20.Location = new System.Drawing.Point(121, 298);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(125, 16);
+            this.label20.Size = new System.Drawing.Size(126, 16);
             this.label20.TabIndex = 202;
             this.label20.Text = "Nombre de Usuario";
             // 

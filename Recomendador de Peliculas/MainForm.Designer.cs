@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_user = new System.Windows.Forms.Label();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -56,11 +58,11 @@
             this.lb_ultimos_estrenos = new System.Windows.Forms.Label();
             this.flowLayoutultimapelis = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_recomenda = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelRecomendados = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelAnimacion = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelFamilia = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -72,6 +74,8 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(14)))), ((int)(((byte)(38)))));
+            this.panelTop.Controls.Add(this.panel1);
+            this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.pictureBox1);
             this.panelTop.Controls.Add(this.lb_user);
             this.panelTop.Controls.Add(this.btnExit);
@@ -83,6 +87,26 @@
             this.panelTop.Size = new System.Drawing.Size(1386, 99);
             this.panelTop.TabIndex = 1;
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(207)))), ((int)(((byte)(9)))));
+            this.panel1.Location = new System.Drawing.Point(344, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(318, 2);
+            this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(350, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 27);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "¡ Hola de Nuevo !    : ";
             // 
             // pictureBox1
             // 
@@ -98,8 +122,9 @@
             // 
             this.lb_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_user.AutoSize = true;
-            this.lb_user.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user.Location = new System.Drawing.Point(1038, 38);
+            this.lb_user.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_user.ForeColor = System.Drawing.Color.White;
+            this.lb_user.Location = new System.Drawing.Point(577, 37);
             this.lb_user.Name = "lb_user";
             this.lb_user.Size = new System.Drawing.Size(85, 23);
             this.lb_user.TabIndex = 3;
@@ -265,11 +290,11 @@
             this.flowLayoutPeli.Controls.Add(this.lb_ultimos_estrenos);
             this.flowLayoutPeli.Controls.Add(this.flowLayoutultimapelis);
             this.flowLayoutPeli.Controls.Add(this.lb_recomenda);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPeli.Controls.Add(this.panelRecomendados);
             this.flowLayoutPeli.Controls.Add(this.label3);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPeli.Controls.Add(this.panelAnimacion);
             this.flowLayoutPeli.Controls.Add(this.label4);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPeli.Controls.Add(this.panelFamilia);
             this.flowLayoutPeli.Location = new System.Drawing.Point(43, 76);
             this.flowLayoutPeli.Name = "flowLayoutPeli";
             this.flowLayoutPeli.Size = new System.Drawing.Size(1302, 561);
@@ -285,18 +310,18 @@
             this.flowLayoutPanel3.Controls.Add(this.web_video_Principal1);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(1934, 521);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1341, 409);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1262, 409);
             this.flowLayoutPanel3.TabIndex = 9;
             // 
             // web_video_Principal1
             // 
             this.web_video_Principal1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.web_video_Principal1.Location = new System.Drawing.Point(180, 3);
-            this.web_video_Principal1.Margin = new System.Windows.Forms.Padding(180, 3, 3, 3);
+            this.web_video_Principal1.Location = new System.Drawing.Point(160, 3);
+            this.web_video_Principal1.Margin = new System.Windows.Forms.Padding(160, 3, 3, 3);
             this.web_video_Principal1.MinimumSize = new System.Drawing.Size(1003, 380);
             this.web_video_Principal1.Name = "web_video_Principal1";
             this.web_video_Principal1.Size = new System.Drawing.Size(1003, 380);
@@ -308,8 +333,8 @@
             this.lb_seccion_name.Dock = System.Windows.Forms.DockStyle.Top;
             this.lb_seccion_name.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_seccion_name.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_seccion_name.Location = new System.Drawing.Point(650, 467);
-            this.lb_seccion_name.Margin = new System.Windows.Forms.Padding(650, 25, 3, 30);
+            this.lb_seccion_name.Location = new System.Drawing.Point(610, 437);
+            this.lb_seccion_name.Margin = new System.Windows.Forms.Padding(610, 5, 3, 35);
             this.lb_seccion_name.Name = "lb_seccion_name";
             this.lb_seccion_name.Size = new System.Drawing.Size(135, 31);
             this.lb_seccion_name.TabIndex = 4;
@@ -319,7 +344,6 @@
             // 
             this.flowLayout_categorias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayout_categorias.AutoScroll = true;
             this.flowLayout_categorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.flowLayout_categorias.Controls.Add(this.btn_animacion);
             this.flowLayout_categorias.Controls.Add(this.btn_aventura);
@@ -329,11 +353,10 @@
             this.flowLayout_categorias.Controls.Add(this.btn_fantasia);
             this.flowLayout_categorias.Controls.Add(this.btn_familia);
             this.flowLayout_categorias.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayout_categorias.Location = new System.Drawing.Point(3, 531);
-            this.flowLayout_categorias.MaximumSize = new System.Drawing.Size(1834, 120);
-            this.flowLayout_categorias.MinimumSize = new System.Drawing.Size(1334, 52);
+            this.flowLayout_categorias.Location = new System.Drawing.Point(3, 506);
+            this.flowLayout_categorias.MinimumSize = new System.Drawing.Size(1234, 52);
             this.flowLayout_categorias.Name = "flowLayout_categorias";
-            this.flowLayout_categorias.Size = new System.Drawing.Size(1334, 52);
+            this.flowLayout_categorias.Size = new System.Drawing.Size(1262, 59);
             this.flowLayout_categorias.TabIndex = 1;
             // 
             // btn_animacion
@@ -348,8 +371,8 @@
             this.btn_animacion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_animacion.IconColor = System.Drawing.Color.Black;
             this.btn_animacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_animacion.Location = new System.Drawing.Point(50, 0);
-            this.btn_animacion.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.btn_animacion.Location = new System.Drawing.Point(40, 0);
+            this.btn_animacion.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.btn_animacion.Name = "btn_animacion";
             this.btn_animacion.Size = new System.Drawing.Size(127, 43);
             this.btn_animacion.TabIndex = 0;
@@ -369,8 +392,8 @@
             this.btn_aventura.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_aventura.IconColor = System.Drawing.Color.Black;
             this.btn_aventura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_aventura.Location = new System.Drawing.Point(267, 0);
-            this.btn_aventura.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
+            this.btn_aventura.Location = new System.Drawing.Point(247, 0);
+            this.btn_aventura.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.btn_aventura.Name = "btn_aventura";
             this.btn_aventura.Size = new System.Drawing.Size(127, 43);
             this.btn_aventura.TabIndex = 5;
@@ -390,8 +413,8 @@
             this.Btn_accion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Btn_accion.IconColor = System.Drawing.Color.Black;
             this.Btn_accion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_accion.Location = new System.Drawing.Point(484, 0);
-            this.Btn_accion.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
+            this.Btn_accion.Location = new System.Drawing.Point(454, 0);
+            this.Btn_accion.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.Btn_accion.Name = "Btn_accion";
             this.Btn_accion.Size = new System.Drawing.Size(127, 43);
             this.Btn_accion.TabIndex = 1;
@@ -411,8 +434,8 @@
             this.btn_comedia.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_comedia.IconColor = System.Drawing.Color.Black;
             this.btn_comedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_comedia.Location = new System.Drawing.Point(701, 0);
-            this.btn_comedia.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
+            this.btn_comedia.Location = new System.Drawing.Point(661, 0);
+            this.btn_comedia.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.btn_comedia.Name = "btn_comedia";
             this.btn_comedia.Size = new System.Drawing.Size(127, 43);
             this.btn_comedia.TabIndex = 6;
@@ -432,8 +455,8 @@
             this.btn_cienciaficion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_cienciaficion.IconColor = System.Drawing.Color.Black;
             this.btn_cienciaficion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cienciaficion.Location = new System.Drawing.Point(918, 0);
-            this.btn_cienciaficion.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
+            this.btn_cienciaficion.Location = new System.Drawing.Point(868, 0);
+            this.btn_cienciaficion.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.btn_cienciaficion.Name = "btn_cienciaficion";
             this.btn_cienciaficion.Size = new System.Drawing.Size(127, 43);
             this.btn_cienciaficion.TabIndex = 7;
@@ -453,8 +476,8 @@
             this.btn_fantasia.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_fantasia.IconColor = System.Drawing.Color.Black;
             this.btn_fantasia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_fantasia.Location = new System.Drawing.Point(1135, 0);
-            this.btn_fantasia.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
+            this.btn_fantasia.Location = new System.Drawing.Point(1075, 0);
+            this.btn_fantasia.Margin = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.btn_fantasia.Name = "btn_fantasia";
             this.btn_fantasia.Size = new System.Drawing.Size(127, 43);
             this.btn_fantasia.TabIndex = 8;
@@ -470,7 +493,7 @@
             this.btn_familia.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_familia.IconColor = System.Drawing.Color.Black;
             this.btn_familia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_familia.Location = new System.Drawing.Point(1315, 3);
+            this.btn_familia.Location = new System.Drawing.Point(1245, 3);
             this.btn_familia.Name = "btn_familia";
             this.btn_familia.Size = new System.Drawing.Size(0, 43);
             this.btn_familia.TabIndex = 9;
@@ -482,7 +505,7 @@
             this.lb_ultimos_estrenos.AutoSize = true;
             this.lb_ultimos_estrenos.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ultimos_estrenos.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_ultimos_estrenos.Location = new System.Drawing.Point(3, 606);
+            this.lb_ultimos_estrenos.Location = new System.Drawing.Point(3, 588);
             this.lb_ultimos_estrenos.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.lb_ultimos_estrenos.Name = "lb_ultimos_estrenos";
             this.lb_ultimos_estrenos.Size = new System.Drawing.Size(206, 31);
@@ -496,9 +519,9 @@
             this.flowLayoutultimapelis.AutoScroll = true;
             this.flowLayoutultimapelis.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutultimapelis.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutultimapelis.Location = new System.Drawing.Point(3, 665);
+            this.flowLayoutultimapelis.Location = new System.Drawing.Point(3, 647);
             this.flowLayoutultimapelis.Name = "flowLayoutultimapelis";
-            this.flowLayoutultimapelis.Size = new System.Drawing.Size(1334, 330);
+            this.flowLayoutultimapelis.Size = new System.Drawing.Size(1262, 330);
             this.flowLayoutultimapelis.TabIndex = 16;
             // 
             // lb_recomenda
@@ -506,46 +529,46 @@
             this.lb_recomenda.AutoSize = true;
             this.lb_recomenda.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_recomenda.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_recomenda.Location = new System.Drawing.Point(3, 1018);
+            this.lb_recomenda.Location = new System.Drawing.Point(3, 1000);
             this.lb_recomenda.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.lb_recomenda.Name = "lb_recomenda";
             this.lb_recomenda.Size = new System.Drawing.Size(336, 31);
             this.lb_recomenda.TabIndex = 17;
             this.lb_recomenda.Text = "Tambien Te Recomendamos";
             // 
-            // flowLayoutPanel1
+            // panelRecomendados
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelRecomendados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 1077);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.panelRecomendados.AutoScroll = true;
+            this.panelRecomendados.BackColor = System.Drawing.Color.Transparent;
+            this.panelRecomendados.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelRecomendados.Location = new System.Drawing.Point(3, 1059);
+            this.panelRecomendados.Name = "panelRecomendados";
+            this.panelRecomendados.Size = new System.Drawing.Size(1262, 335);
+            this.panelRecomendados.TabIndex = 18;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(3, 1435);
+            this.label3.Location = new System.Drawing.Point(3, 1417);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 31);
             this.label3.TabIndex = 19;
             this.label3.Text = "Animacion";
             // 
-            // flowLayoutPanel2
+            // panelAnimacion
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 1494);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel2.TabIndex = 20;
+            this.panelAnimacion.AutoScroll = true;
+            this.panelAnimacion.BackColor = System.Drawing.Color.Transparent;
+            this.panelAnimacion.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelAnimacion.Location = new System.Drawing.Point(3, 1476);
+            this.panelAnimacion.Name = "panelAnimacion";
+            this.panelAnimacion.Size = new System.Drawing.Size(1262, 335);
+            this.panelAnimacion.TabIndex = 20;
             // 
             // label4
             // 
@@ -554,24 +577,24 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(3, 1852);
+            this.label4.Location = new System.Drawing.Point(3, 1834);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(231, 31);
             this.label4.TabIndex = 21;
             this.label4.Text = "Para ver en Familia";
             // 
-            // flowLayoutPanel4
+            // panelFamilia
             // 
-            this.flowLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelFamilia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 1911);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel4.TabIndex = 22;
+            this.panelFamilia.AutoScroll = true;
+            this.panelFamilia.BackColor = System.Drawing.Color.Transparent;
+            this.panelFamilia.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelFamilia.Location = new System.Drawing.Point(3, 1893);
+            this.panelFamilia.Name = "panelFamilia";
+            this.panelFamilia.Size = new System.Drawing.Size(1262, 335);
+            this.panelFamilia.TabIndex = 22;
             // 
             // MainForm
             // 
@@ -621,11 +644,11 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutultimapelis;
         public System.Windows.Forms.Label lb_recomenda;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel panelRecomendados;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel panelAnimacion;
         public System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel panelFamilia;
         private FontAwesome.Sharp.IconButton btn_animacion;
         private FontAwesome.Sharp.IconButton btn_aventura;
         private FontAwesome.Sharp.IconButton Btn_accion;
@@ -635,6 +658,8 @@
         private FontAwesome.Sharp.IconButton btn_familia;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btn_cerrar_sesion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -21,26 +21,26 @@ namespace Recomendador_de_Peliculas.DAO
 
         #region Create
 
-        public void CreateUser(string email, string name, string passwd)
+        public void CreateUser(string name, string email, string passwd)
         {
             try
             {
                 connection.Open();
 
-                string consult = "INSERT INTO usuarios (correo, username, passwd) VALUES (@Email, @Name, @Passwd)";
+                string consult = "INSERT INTO usuarios (username,correo,passwd) VALUES (@Name,@Email,@Passwd)";
 
                 //CONFIGURING COMMAND
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
-                cmd.CommandText = consult;
-                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.CommandText = consult;               
                 cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Email", email);
                 cmd.Parameters.AddWithValue("@Passwd", passwd);
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Error en insertar usuario" + ex.StackTrace);
             }
             finally
             {
@@ -327,22 +327,18 @@ namespace Recomendador_de_Peliculas.DAO
             {
                 connection.Open();
 
-                string consult = "SELECT username, correo FROM usuarios WHERE username=@Usermane AND correo=@Correo LIMIT 1";
+                string consult = "SELECT username, correo FROM usuarios WHERE username=@Username AND correo=@Correo LIMIT 1";
 
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
                 cmd.CommandText = consult;
-                cmd.Parameters.AddWithValue("@Usermane", username);
+                cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Correo", email);
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     exist = true;
-                }
-                else if (exist == false)
-                {
-                    MessageBox.Show("ERROR: ACCESO INVALIDO EN LOS CAMPOS DE REGISTRO", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }             
                 reader.Close();
             }
             catch (MySqlException ex)
