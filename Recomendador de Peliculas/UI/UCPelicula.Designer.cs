@@ -41,8 +41,6 @@
             // 
             // lblNombrePeli
             // 
-            this.lblNombrePeli.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombrePeli.AutoSize = true;
             this.lblNombrePeli.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePeli.Location = new System.Drawing.Point(3, 252);
