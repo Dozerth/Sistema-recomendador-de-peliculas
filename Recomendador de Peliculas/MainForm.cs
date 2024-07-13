@@ -26,9 +26,6 @@ namespace Recomendador_de_Peliculas
         private Form currentChildForm = null;
         private const int cGrip = 16;
         private const int cCaption = 32;
-        private string YOUTUBE_BASE_PATH = "https://www.youtube.com/watch?v";
-        private string CURRENT_DIRECTORY = System.IO.Directory.GetCurrentDirectory();
-        private string IMAGES_BASE_PATH = "../../../Recursos/Images/";
         Template_Search open = new Template_Search();
 
         //Private fields for MySQL queries
@@ -153,14 +150,18 @@ namespace Recomendador_de_Peliculas
         private void MainForm_Load(object sender, EventArgs e)
         {
             flowLayout_categorias.Margin = new Padding(10);
+            string video1 = "I0_qFoptZ4Y";
+            string video2 = "xiC2iXTXHxw"; //This variable is unused
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
-            html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='975' height='360' frameborder='0' allowfullscreen></iframe>";
-            html += "</head></html>";
-            string video1 = "https://www.youtube.com/watch?v=I0_qFoptZ4Y";
-            string video2 = "https://www.youtube.com/watch?v=xiC2iXTXHxw";
-            this.web_video_Principal1.DocumentText = string.Format(html, video1.Split('=')[1]);
-            //this.web_video_Principal2.DocumentText = string.Format(html, video2.Split('=')[1]);      
+            html += @"<style type='text/css'> body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+                    .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
+                    .second-row {position: absolute; top: 0px; left: 0; right: 0; bottom: 0; background-color: red }
+                    .second-row iframe {display: block; position: absolute; width: 100%; height: 100%; border: none;}</style>";
+            html += "<div class='second-row'>";
+            html += string.Format("<iframe id='video' src='https://www.youtube.com/embed/{0}' allowfullscreen></iframe>", video1);
+            html += "</div></head></html>";
+            this.web_video_Principal1.DocumentText = html;     
         }
 
         #region Buttons_Actions
