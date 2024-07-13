@@ -210,7 +210,6 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1376, 678);
             this.panelContainer.TabIndex = 2;
-            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
             // btn_cerrar_sesion
             // 
@@ -259,7 +258,6 @@
             this.flowLayoutPeli.Name = "flowLayoutPeli";
             this.flowLayoutPeli.Size = new System.Drawing.Size(1302, 561);
             this.flowLayoutPeli.TabIndex = 3;
-            this.flowLayoutPeli.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPeli_Paint);
             // 
             // flowLayoutPanel3
             // 

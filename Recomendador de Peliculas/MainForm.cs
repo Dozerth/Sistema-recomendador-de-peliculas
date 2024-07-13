@@ -41,12 +41,6 @@ namespace Recomendador_de_Peliculas
         public MainForm()
         {
             InitializeComponent();
-            CollapseSubMenus();
-            //Border buttons
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(5, 50);
-            //panelLateral.Controls.Add(leftBorderBtn);
-
             //Handle working area - resize
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
@@ -94,8 +88,6 @@ namespace Recomendador_de_Peliculas
         //    base.WndProc(ref m);
         //}
 
-
-
         #endregion
 
         #region Panels
@@ -104,70 +96,6 @@ namespace Recomendador_de_Peliculas
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        #endregion
-
-        #region Desing Handlers
-
-        private void CollapseSubMenus()
-        {
-            //TODO: Add each panel visible condition to false; panels from panelLateral controls
-            //panelPayloads.Visible = false;            
-        }
-
-        private void HideSubMenu()
-        {
-            //TODO: Add to each panel a condition as this
-            //if (panelPayloads.Visible == true) panelPayloads.Visible = false;
-        }
-
-        private void ShowSubMenu(Panel submenu)
-        {
-            if (submenu.Visible == false)
-            {
-                HideSubMenu();
-                submenu.Visible = true;
-            }
-            else
-            {
-                submenu.Visible = false;
-            }
-        }
-
-        //private void ActivateButton(object senderBtn, Color color)
-        //{
-        //    if (senderBtn != null)
-        //    {
-        //        DisableButton();
-        //        //Button
-        //        currentButton = (IconButton)senderBtn; //IconButton has to be imported from (FontAwesome Library)
-        //        currentButton.BackColor = RGBColors.MainButtonsActive;
-        //        currentButton.ForeColor = color;
-        //        currentButton.TextAlign = ContentAlignment.MiddleLeft;
-        //        currentButton.IconColor = color;
-        //        currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-        //        currentButton.ImageAlign = ContentAlignment.MiddleRight;
-        //        //Left border button
-        //        leftBorderBtn.BackColor = color;
-        //        leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
-        //        leftBorderBtn.Visible = true;
-        //        leftBorderBtn.BringToFront();
-        //    }
-        //}
-
-        //private void DisableButton()
-        //{
-        //    if (currentButton != null)
-        //    {
-        //        currentButton.BackColor = RGBColors.MainButtonsDefault;
-        //        currentButton.ForeColor = Color.Gainsboro;
-        //        currentButton.TextAlign = ContentAlignment.MiddleLeft;
-        //        currentButton.IconColor = Color.Gainsboro;
-        //        currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-        //        currentButton.ImageAlign = ContentAlignment.MiddleRight;
-        //        leftBorderBtn.Visible = false; //Testing for piclogo click
-        //    }
-        //}
-
         #endregion
 
         #region Child forms control
@@ -193,31 +121,6 @@ namespace Recomendador_de_Peliculas
                 externalChildForm.BringToFront();
             }
         }
-        #endregion
-
-        #region Main Panel Buttons
-
-        private void ExampleToShowPanelsFromPanelLateral(object sender, EventArgs e)
-        {
-            //TODO: The code of this function is intended to be taken to each button which
-            //      is a "container" of a panel, this collapses the SubMenu Panel, passed
-            //      as an argument to ShowSubMenu() Function
-            
-            //CODE
-            //ShowSubMenu(panelSessions);
-            //ActivateButton(sender, RGBColors.MainButtonsLettersActive);
-        }
-
-        private void ExampleToCallForms(object sender, EventArgs e)
-        {
-            //TODO: The code of this function is intended to be taken to each button which
-            //      invokes a new form form UI design
-
-            // CODE
-            // OpenChildForm<NombreDelForm>();
-            HideSubMenu();
-        }
-
         #endregion
 
         #region Control Buttons
@@ -246,21 +149,6 @@ namespace Recomendador_de_Peliculas
         }
 
         #endregion
-        private void panelContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            UCPelicula pelicula = new UCPelicula();
-            pelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
-            pelicula.lblNombrePeli.Text = "Intensamente 2";
-            pelicula.Width = 216;
-            pelicula.Height = 291;
-            pelicula.Margin = new Padding(10);
-            flowLayoutultimapelis.Controls.Add(pelicula);
-        }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -337,10 +225,6 @@ namespace Recomendador_de_Peliculas
         }
 
         #endregion
-
-        private void flowLayoutPeli_Paint(object sender, PaintEventArgs e)
-        {
-        }
 
         private void LoadMainMovies()
         {
