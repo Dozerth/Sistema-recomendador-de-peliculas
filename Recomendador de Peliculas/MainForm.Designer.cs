@@ -80,7 +80,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1459, 99);
+            this.panelTop.Size = new System.Drawing.Size(1386, 99);
             this.panelTop.TabIndex = 1;
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
             // 
@@ -99,7 +99,7 @@
             this.lb_name_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_name_user.AutoSize = true;
             this.lb_name_user.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name_user.Location = new System.Drawing.Point(1111, 38);
+            this.lb_name_user.Location = new System.Drawing.Point(1038, 38);
             this.lb_name_user.Name = "lb_name_user";
             this.lb_name_user.Size = new System.Drawing.Size(85, 23);
             this.lb_name_user.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 25;
-            this.btnExit.Location = new System.Drawing.Point(1429, 5);
+            this.btnExit.Location = new System.Drawing.Point(1356, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(25, 25);
             this.btnExit.TabIndex = 2;
@@ -134,7 +134,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 25;
-            this.btnMaximize.Location = new System.Drawing.Point(1398, 5);
+            this.btnMaximize.Location = new System.Drawing.Point(1325, 5);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(25, 25);
             this.btnMaximize.TabIndex = 1;
@@ -152,7 +152,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Location = new System.Drawing.Point(1367, 5);
+            this.btnMinimize.Location = new System.Drawing.Point(1294, 5);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(25, 25);
             this.btnMinimize.TabIndex = 0;
@@ -210,7 +210,7 @@
             this.panelContainer.Controls.Add(this.textBox1);
             this.panelContainer.Location = new System.Drawing.Point(5, 105);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1449, 789);
+            this.panelContainer.Size = new System.Drawing.Size(1376, 678);
             this.panelContainer.TabIndex = 2;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
@@ -229,7 +229,7 @@
             this.btn_cerrar_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cerrar_sesion.IconSize = 25;
             this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cerrar_sesion.Location = new System.Drawing.Point(1298, 21);
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(1225, 21);
             this.btn_cerrar_sesion.Margin = new System.Windows.Forms.Padding(40, 0, 50, 0);
             this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
             this.btn_cerrar_sesion.Size = new System.Drawing.Size(120, 33);
@@ -272,7 +272,7 @@
             this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPeli.Location = new System.Drawing.Point(43, 76);
             this.flowLayoutPeli.Name = "flowLayoutPeli";
-            this.flowLayoutPeli.Size = new System.Drawing.Size(1375, 672);
+            this.flowLayoutPeli.Size = new System.Drawing.Size(1302, 561);
             this.flowLayoutPeli.TabIndex = 3;
             this.flowLayoutPeli.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPeli_Paint);
             // 
@@ -578,13 +578,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.ClientSize = new System.Drawing.Size(1459, 899);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelTop);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1459, 899);
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Recomendador de Películas";
