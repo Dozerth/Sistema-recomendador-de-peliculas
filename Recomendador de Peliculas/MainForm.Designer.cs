@@ -40,7 +40,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.btn_cerrar_sesion = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPeli = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.web_video_Principal1 = new System.Windows.Forms.WebBrowser();
@@ -203,7 +202,6 @@
             this.panelContainer.AutoScroll = true;
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.panelContainer.Controls.Add(this.btn_cerrar_sesion);
-            this.panelContainer.Controls.Add(this.iconButton1);
             this.panelContainer.Controls.Add(this.btn_buscar);
             this.panelContainer.Controls.Add(this.lb_buscar);
             this.panelContainer.Controls.Add(this.flowLayoutPeli);
@@ -238,19 +236,6 @@
             this.btn_cerrar_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
             this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(1089, 23);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 6;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // flowLayoutPeli
             // 
@@ -618,7 +603,6 @@
         public System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.WebBrowser web_video_Principal1;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutultimapelis;
         public System.Windows.Forms.Label lb_recomenda;
         private System.Windows.Forms.FlowLayoutPanel panelRecomendados;
