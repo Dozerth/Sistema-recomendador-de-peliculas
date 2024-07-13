@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPelicula));
             this.lblNombrePeli = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.icono_recomend = new FontAwesome.Sharp.IconPictureBox();
+            this.lblAnio = new System.Windows.Forms.Label();
+            this.iconRecomendado = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBox_impeli = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icono_recomend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_impeli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,37 +56,37 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblAnio);
             this.panel1.Location = new System.Drawing.Point(152, 202);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(64, 32);
             this.panel1.TabIndex = 3;
             // 
-            // label1
+            // lblAnio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(9, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 22);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "2024";
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblAnio.Location = new System.Drawing.Point(9, 5);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(50, 22);
+            this.lblAnio.TabIndex = 4;
+            this.lblAnio.Text = "2024";
             // 
-            // icono_recomend
+            // iconRecomendado
             // 
-            this.icono_recomend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.iconRecomendado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.icono_recomend.BackColor = System.Drawing.Color.Orange;
-            this.icono_recomend.ForeColor = System.Drawing.SystemColors.Window;
-            this.icono_recomend.IconChar = FontAwesome.Sharp.IconChar.Sun;
-            this.icono_recomend.IconColor = System.Drawing.SystemColors.Window;
-            this.icono_recomend.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icono_recomend.Location = new System.Drawing.Point(184, 0);
-            this.icono_recomend.Name = "icono_recomend";
-            this.icono_recomend.Size = new System.Drawing.Size(32, 32);
-            this.icono_recomend.TabIndex = 4;
-            this.icono_recomend.TabStop = false;
+            this.iconRecomendado.BackColor = System.Drawing.Color.Orange;
+            this.iconRecomendado.ForeColor = System.Drawing.SystemColors.Window;
+            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconRecomendado.IconColor = System.Drawing.SystemColors.Window;
+            this.iconRecomendado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconRecomendado.Location = new System.Drawing.Point(184, 0);
+            this.iconRecomendado.Name = "iconRecomendado";
+            this.iconRecomendado.Size = new System.Drawing.Size(32, 32);
+            this.iconRecomendado.TabIndex = 4;
+            this.iconRecomendado.TabStop = false;
             // 
             // pictureBox_impeli
             // 
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.icono_recomend);
+            this.Controls.Add(this.iconRecomendado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombrePeli);
             this.Controls.Add(this.pictureBox_impeli);
@@ -111,7 +111,7 @@
             this.Size = new System.Drawing.Size(216, 291);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icono_recomend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_impeli)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,8 +121,8 @@
         #endregion
         public System.Windows.Forms.Label lblNombrePeli;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconPictureBox icono_recomend;
+        public System.Windows.Forms.Label lblAnio;
         private System.Windows.Forms.PictureBox pictureBox_impeli;
+        public FontAwesome.Sharp.IconPictureBox iconRecomendado;
     }
 }
