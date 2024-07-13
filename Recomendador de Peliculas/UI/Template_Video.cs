@@ -23,15 +23,22 @@ namespace Recomendador_de_Peliculas.UI
             this.lblTitulo.Text = MovieCache.Title;
             this.lblDescripcion.Text = MovieCache.Description;
             this.iconRecomendado.Visible = MovieCache.Recommended;
+            this.lblActores.Text = "Actores: " + MovieCache.Actors;
         }
 
         private void LoadMovieTrailer(string trailer)
         {
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
-            html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='1120' height='600' frameborder='0' allowfullscreen></iframe>";
-            html += "</head></html>";
-            this.web_video.DocumentText = string.Format(html, trailer);
+            html += @"<style type='text/css'> body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+                    .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
+                    .second-row {position: absolute; top: 0px; left: 0; right: 0; bottom: 0; background-color: red }
+                    .second-row iframe {display: block; position: absolute; width: 100%; height: 100%; border: none;}</style>";
+            //html += "<iframe id='video' src='https://www.youtube.com/embed/{0}' width='1120' height='600' frameborder='0' allowfullscreen></iframe>";
+            html += "<div class='second-row'>";
+            html += string.Format("<iframe id='video' src='https://www.youtube.com/embed/{0}' allowfullscreen></iframe>", trailer);
+            html += "</div></head></html>";
+            this.web_video.DocumentText = html;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

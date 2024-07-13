@@ -65,9 +65,7 @@ namespace Recomendador_de_Peliculas.UI
                 MovieCache.Image = this.pictureBox_impeli.ImageLocation;
                 MovieCache.Actors = this.Actors;
                 MovieCache.Description = this.Description;
-                MovieCache.Recommended = this.Recommended;
-                
-
+                MovieCache.Recommended = this.Recommended;              
                 //Open child form only when MovieCache is updated
                 formPrincial.OpenChildForm<Template_Video>();
             }
