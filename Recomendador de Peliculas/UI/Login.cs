@@ -55,7 +55,7 @@ namespace Recomendador_de_Peliculas.UI
         {
             this.Hide();
             open_mainForm.ShowDialog();
-            this.Show();
+            //this.Show();
         }
     }
 }

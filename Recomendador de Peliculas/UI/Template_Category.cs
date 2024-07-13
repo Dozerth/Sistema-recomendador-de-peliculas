@@ -7,30 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Recomendador_de_Peliculas.Business;
+using Recomendador_de_Peliculas.Common;
+using Recomendador_de_Peliculas.DAO;
+using Recomendador_de_Peliculas.DTO;
+
 
 namespace Recomendador_de_Peliculas.UI
 {
     public partial class Template_Category : Form
     {
+        //Private fields for MySQL queries
+        private MoviesDAO moviesDAO = new MoviesDAO();
+        private MoviesBusiness movies = new MoviesBusiness();
+
         public Template_Category()
         {
             InitializeComponent();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            UCPelicula pelicula = new UCPelicula();
-            pelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
-            pelicula.lblNombrePeli.Text = "Esta es mi peli";
-            pelicula.Width = 216;
-            pelicula.Height = 291;
-            pelicula.Margin = new Padding(12);
-            flowLayoutAnimacion.Controls.Add(pelicula);
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Template_Category_Load(object sender, EventArgs e)
+        {
+            List<MoviesDTO> categoryMovies = moviesDAO.RetrieveMoviesByGenre(MovieCache.CategorySearch, 100);
+            movies.LoadMoviesInPanel(flowLayoutAnimacion, categoryMovies);
         }
     }
 }

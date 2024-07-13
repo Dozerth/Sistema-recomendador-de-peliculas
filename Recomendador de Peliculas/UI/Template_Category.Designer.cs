@@ -30,7 +30,6 @@
         {
             this.flowLayoutAnimacion = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_category_name = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_exit = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
@@ -42,7 +41,7 @@
             this.flowLayoutAnimacion.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutAnimacion.Location = new System.Drawing.Point(124, 95);
             this.flowLayoutAnimacion.Name = "flowLayoutAnimacion";
-            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1216, 622);
+            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1169, 622);
             this.flowLayoutAnimacion.TabIndex = 17;
             // 
             // lb_category_name
@@ -55,19 +54,6 @@
             this.lb_category_name.Size = new System.Drawing.Size(273, 39);
             this.lb_category_name.TabIndex = 6;
             this.lb_category_name.Text = "Category Name";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(1270, 45);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Btn_peli";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btn_exit
             // 
@@ -91,15 +77,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1433, 750);
+            this.ClientSize = new System.Drawing.Size(1386, 750);
             this.Controls.Add(this.btn_exit);
-            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.lb_category_name);
             this.Controls.Add(this.flowLayoutAnimacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template_Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template_Category";
+            this.Load += new System.EventHandler(this.Template_Category_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,7 +94,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutAnimacion;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btn_exit;
         public System.Windows.Forms.Label lb_category_name;
     }

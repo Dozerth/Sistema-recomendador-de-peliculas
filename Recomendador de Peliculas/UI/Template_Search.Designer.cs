@@ -32,10 +32,9 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.flowLayoutAnimacion = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_exit = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
             this.lb_buscar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tboxBuscar = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_name_user = new System.Windows.Forms.Label();
@@ -56,13 +55,12 @@
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.panelContainer.Controls.Add(this.flowLayoutAnimacion);
             this.panelContainer.Controls.Add(this.btn_exit);
-            this.panelContainer.Controls.Add(this.iconButton1);
             this.panelContainer.Controls.Add(this.btn_buscar);
             this.panelContainer.Controls.Add(this.lb_buscar);
-            this.panelContainer.Controls.Add(this.textBox1);
+            this.panelContainer.Controls.Add(this.tboxBuscar);
             this.panelContainer.Location = new System.Drawing.Point(5, 105);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1449, 789);
+            this.panelContainer.Size = new System.Drawing.Size(1376, 678);
             this.panelContainer.TabIndex = 3;
             // 
             // flowLayoutAnimacion
@@ -73,7 +71,7 @@
             this.flowLayoutAnimacion.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutAnimacion.Location = new System.Drawing.Point(116, 92);
             this.flowLayoutAnimacion.Name = "flowLayoutAnimacion";
-            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1216, 605);
+            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1126, 605);
             this.flowLayoutAnimacion.TabIndex = 20;
             // 
             // btn_exit
@@ -94,18 +92,6 @@
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(1089, 23);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 6;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // btn_buscar
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
@@ -122,6 +108,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(36, 31);
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // lb_buscar
             // 
@@ -134,13 +121,14 @@
             this.lb_buscar.TabIndex = 5;
             this.lb_buscar.Text = "Buscar:";
             // 
-            // textBox1
+            // tboxBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(429, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 26);
-            this.textBox1.TabIndex = 2;
+            this.tboxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxBuscar.Location = new System.Drawing.Point(429, 22);
+            this.tboxBuscar.Name = "tboxBuscar";
+            this.tboxBuscar.Size = new System.Drawing.Size(564, 26);
+            this.tboxBuscar.TabIndex = 2;
+            this.tboxBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panelTop
             // 
@@ -153,7 +141,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1459, 99);
+            this.panelTop.Size = new System.Drawing.Size(1386, 99);
             this.panelTop.TabIndex = 4;
             // 
             // pictureBox1
@@ -188,7 +176,7 @@
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 25;
-            this.btnExit.Location = new System.Drawing.Point(1429, 5);
+            this.btnExit.Location = new System.Drawing.Point(1356, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(25, 25);
             this.btnExit.TabIndex = 2;
@@ -206,7 +194,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 25;
-            this.btnMaximize.Location = new System.Drawing.Point(1398, 5);
+            this.btnMaximize.Location = new System.Drawing.Point(1325, 5);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(25, 25);
             this.btnMaximize.TabIndex = 1;
@@ -224,7 +212,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Location = new System.Drawing.Point(1367, 5);
+            this.btnMinimize.Location = new System.Drawing.Point(1294, 5);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(25, 25);
             this.btnMinimize.TabIndex = 0;
@@ -236,12 +224,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.ClientSize = new System.Drawing.Size(1459, 899);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1459, 899);
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "Template_Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template_Search";
@@ -257,10 +245,9 @@
         #endregion
 
         public System.Windows.Forms.Panel panelContainer;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btn_buscar;
         private System.Windows.Forms.Label lb_buscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tboxBuscar;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_name_user;
