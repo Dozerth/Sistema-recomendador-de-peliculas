@@ -35,7 +35,7 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -121,7 +121,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_email);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -154,20 +154,22 @@
             this.label3.TabIndex = 214;
             this.label3.Text = "Nombre de Usuario";
             // 
-            // textBox1
+            // txt_email
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(124, 249);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(231, 32);
-            this.textBox1.TabIndex = 212;
+            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
+            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_email.Location = new System.Drawing.Point(124, 249);
+            this.txt_email.Multiline = true;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_email.Size = new System.Drawing.Size(231, 32);
+            this.txt_email.TabIndex = 212;
+            this.txt_email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_email_KeyPress);
+            this.txt_email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_email_Validating);
             // 
             // label2
             // 
@@ -247,6 +249,8 @@
             this.TxtPassword.Size = new System.Drawing.Size(231, 32);
             this.TxtPassword.TabIndex = 199;
             this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // TxtUser
             // 
@@ -262,6 +266,7 @@
             this.TxtUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtUser.Size = new System.Drawing.Size(231, 32);
             this.TxtUser.TabIndex = 204;
+            this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // checkBox1
             // 
@@ -274,6 +279,7 @@
             this.checkBox1.TabIndex = 206;
             this.checkBox1.Text = "Ver Contraseña";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label19
             // 
@@ -332,6 +338,7 @@
             this.Btn_Entrar.Text = "REGISTRARSE";
             this.Btn_Entrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Entrar.UseVisualStyleBackColor = false;
+            this.Btn_Entrar.Click += new System.EventHandler(this.Btn_Entrar_Click);
             // 
             // pictureBox3
             // 
@@ -419,7 +426,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
     }

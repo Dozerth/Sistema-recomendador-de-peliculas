@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(207)))), ((int)(((byte)(9)))));
             this.panel1.Controls.Add(this.lblAnio);
             this.panel1.Location = new System.Drawing.Point(152, 202);
             this.panel1.Name = "panel1";
@@ -65,6 +65,7 @@
             // lblAnio
             // 
             this.lblAnio.AutoSize = true;
+            this.lblAnio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(207)))), ((int)(((byte)(9)))));
             this.lblAnio.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnio.ForeColor = System.Drawing.SystemColors.Window;
             this.lblAnio.Location = new System.Drawing.Point(9, 5);

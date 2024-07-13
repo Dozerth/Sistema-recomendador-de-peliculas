@@ -187,6 +187,8 @@
             this.TxtPassword.Size = new System.Drawing.Size(231, 32);
             this.TxtPassword.TabIndex = 199;
             this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // TxtUser
             // 
@@ -202,6 +204,7 @@
             this.TxtUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtUser.Size = new System.Drawing.Size(231, 32);
             this.TxtUser.TabIndex = 204;
+            this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // checkBox1
             // 
@@ -214,6 +217,7 @@
             this.checkBox1.TabIndex = 206;
             this.checkBox1.Text = "Ver Contraseña";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label19
             // 

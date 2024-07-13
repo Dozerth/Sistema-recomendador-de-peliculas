@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Recomendador_de_Peliculas.DTO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using Recomendador_de_Peliculas.Common;
+using System.Windows.Forms;
+
 
 namespace Recomendador_de_Peliculas.DAO
 {
@@ -18,26 +21,26 @@ namespace Recomendador_de_Peliculas.DAO
 
         #region Create
 
-        public void CreateUser(string email, string name, string passwd)
+        public void CreateUser(string name, string email, string passwd)
         {
             try
             {
                 connection.Open();
 
-                string consult = "INSERT INTO usuarios (correo, nombre, passwd) VALUES (@Email, @Name, @Passwd)";
+                string consult = "INSERT INTO usuarios (username,correo,passwd) VALUES (@Name,@Email,@Passwd)";
 
                 //CONFIGURING COMMAND
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
-                cmd.CommandText = consult;
-                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.CommandText = consult;               
                 cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Email", email);
                 cmd.Parameters.AddWithValue("@Passwd", passwd);
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Error en insertar usuario" + ex.StackTrace);
             }
             finally
             {
@@ -243,30 +246,34 @@ namespace Recomendador_de_Peliculas.DAO
 
         #region Validations
 
-        public bool Login(string email, string password)
+        public bool Login(string username, string password)
         {
             bool logged = false;
             try
             {
                 connection.Open();
 
-                string consult = "SELECT correo, passwd FROM usuarios WHERE correo=@Correo AND passwd=@Pass LIMIT 1";
+                string consult = "SELECT username, passwd FROM usuarios WHERE username=@Usermane AND passwd=@Pass LIMIT 1";
 
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
                 cmd.CommandText = consult;
-                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Usermane", username);
                 cmd.Parameters.AddWithValue("@Pass", password);
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     logged = true;
                 }
+                else if (logged == false)
+                {
+                    MessageBox.Show("ERROR: ACCESO INVALIDO", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 reader.Close();
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Error en Validar User" + ex.Message);
             }
             finally
             {
@@ -275,29 +282,68 @@ namespace Recomendador_de_Peliculas.DAO
             return logged;
         }
 
-        public bool ValidateExistence(string email)
+        public bool ConectarUser(string user)
+        {
+            bool exist = false;
+
+            try
+            {
+                connection.Open();
+
+                string conect = "SELECT *FROM usuarios WHERE username= '" + user + "'";
+
+                cmd.Connection = connection;
+                cmd.Parameters.Clear();
+                cmd.CommandText = conect;
+                cmd.Parameters.AddWithValue("@user", user);
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        UserLoginCache.ID = reader.GetInt32(0);
+                        UserLoginCache.Username = reader.GetString(1);
+                    }
+                    exist = true;
+                }
+
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error en Conectar a la Base de Datos" + ex.StackTrace);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return exist;
+        }
+
+        public bool ValidateExistence(string username, string email)
         {
             bool exist = false;
             try
             {
                 connection.Open();
 
-                string consult = "SELECT correo FROM usuarios WHERE correo=@Correo LIMIT 1";
+                string consult = "SELECT username, correo FROM usuarios WHERE username=@Username AND correo=@Correo LIMIT 1";
 
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
                 cmd.CommandText = consult;
+                cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Correo", email);
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     exist = true;
-                }
+                }             
                 reader.Close();
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Error en Validar User y email" + ex.StackTrace);
             }
             finally
             {
