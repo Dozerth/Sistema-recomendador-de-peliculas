@@ -14,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Recomendador_de_Peliculas.UI;
 using Recomendador_de_Peliculas.DAO;
 using Recomendador_de_Peliculas.DTO;
+using Recomendador_de_Peliculas.Business;
 
 namespace Recomendador_de_Peliculas
 {
@@ -32,6 +33,7 @@ namespace Recomendador_de_Peliculas
 
         //Private fields for MySQL queries
         private MoviesDAO moviesDAO = new MoviesDAO();
+        private MoviesBusiness movies = new MoviesBusiness();
 
 
 
@@ -234,7 +236,8 @@ namespace Recomendador_de_Peliculas
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            this.Close();
         }
 
         private void btnExitSecond_Click(object sender, EventArgs e)
@@ -342,33 +345,13 @@ namespace Recomendador_de_Peliculas
         private void LoadMainMovies()
         {
             List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByYear(2024, 10);
-            LoadMoviesInPanel(flowLayoutultimapelis, peliculas);
+            movies.LoadMoviesInPanel(flowLayoutultimapelis, peliculas);
             peliculas = moviesDAO.RetrieveMoviesByGenre(4, 10);
-            LoadMoviesInPanel(panelRecomendados, peliculas, true);
+            movies.LoadMoviesInPanel(panelRecomendados, peliculas, true);
             peliculas = moviesDAO.RetrieveMoviesByGenre(1, 10);
-            LoadMoviesInPanel(panelAnimacion, peliculas);
+            movies.LoadMoviesInPanel(panelAnimacion, peliculas);
             peliculas = moviesDAO.RetrieveMoviesByGenre(2, 10);
-            LoadMoviesInPanel(panelFamilia, peliculas);
-        }
-
-        private void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas, bool recommended = false)
-        {
-            Random rnd = new Random();
-            foreach (MoviesDTO pelicula in peliculas)
-            {
-                if (recommended == false && rnd.Next(0,11) == 4) { recommended = true; } 
-                UCPelicula ucPelicula = new UCPelicula();
-                ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
-                ucPelicula.lblNombrePeli.Text = pelicula.Title;
-                ucPelicula.lblAnio.Text = pelicula.Year;                
-                ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
-                ucPelicula.iconRecomendado.Visible = recommended;
-                ucPelicula.iconRecomendado.BringToFront();
-                ucPelicula.Width = 216;
-                ucPelicula.Height = 291;
-                ucPelicula.Margin = new Padding(12);
-                panel.Controls.Add(ucPelicula);
-            }
+            movies.LoadMoviesInPanel(panelFamilia, peliculas);
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

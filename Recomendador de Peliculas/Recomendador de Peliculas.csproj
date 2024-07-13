@@ -57,6 +57,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\MoviesBusiness.cs" />
     <Compile Include="Common\UserLoginCache.cs" />
     <Compile Include="DAO\ConnectionDB.cs" />
     <Compile Include="DAO\MoviesDAO.cs" />
