@@ -28,47 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_videoLink = new System.Windows.Forms.TextBox();
-            this.btn_play = new FontAwesome.Sharp.IconButton();
             this.web_video = new System.Windows.Forms.WebBrowser();
             this.btn_exit = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.picboxPelicula = new System.Windows.Forms.PictureBox();
+            this.iconRecomendado = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(122, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LINK DEL VIDEO";
-            // 
-            // txt_videoLink
-            // 
-            this.txt_videoLink.Location = new System.Drawing.Point(219, 27);
-            this.txt_videoLink.Name = "txt_videoLink";
-            this.txt_videoLink.Size = new System.Drawing.Size(419, 20);
-            this.txt_videoLink.TabIndex = 1;
-            // 
-            // btn_play
-            // 
-            this.btn_play.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_play.IconColor = System.Drawing.Color.Black;
-            this.btn_play.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_play.Location = new System.Drawing.Point(660, 27);
-            this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(70, 22);
-            this.btn_play.TabIndex = 2;
-            this.btn_play.Text = "iconButton1";
-            this.btn_play.UseVisualStyleBackColor = true;
-            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
             // web_video
             // 
@@ -96,82 +66,92 @@
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // label2
+            // lblTitulo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(815, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 39);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "TRAILER PELI";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitulo.Location = new System.Drawing.Point(815, 19);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(257, 39);
+            this.lblTitulo.TabIndex = 5;
+            this.lblTitulo.Text = "TRAILER PELI";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel1.Controls.Add(this.iconRecomendado);
+            this.panel1.Controls.Add(this.picboxPelicula);
             this.panel1.Location = new System.Drawing.Point(12, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 250);
             this.panel1.TabIndex = 6;
             // 
-            // label4
+            // lblDescripcion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(10, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "IMG DE LA PELI";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 352);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(60, 13);
+            this.lblDescripcion.TabIndex = 7;
+            this.lblDescripcion.Text = "Description";
             // 
-            // label3
+            // picboxPelicula
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(24, 363);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Description";
+            this.picboxPelicula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picboxPelicula.Location = new System.Drawing.Point(0, 0);
+            this.picboxPelicula.Name = "picboxPelicula";
+            this.picboxPelicula.Size = new System.Drawing.Size(215, 250);
+            this.picboxPelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxPelicula.TabIndex = 8;
+            this.picboxPelicula.TabStop = false;
+            // 
+            // iconRecomendado
+            // 
+            this.iconRecomendado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconRecomendado.BackColor = System.Drawing.Color.Orange;
+            this.iconRecomendado.ForeColor = System.Drawing.SystemColors.Window;
+            this.iconRecomendado.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconRecomendado.IconColor = System.Drawing.SystemColors.Window;
+            this.iconRecomendado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconRecomendado.Location = new System.Drawing.Point(183, 0);
+            this.iconRecomendado.Name = "iconRecomendado";
+            this.iconRecomendado.Size = new System.Drawing.Size(32, 32);
+            this.iconRecomendado.TabIndex = 8;
+            this.iconRecomendado.TabStop = false;
             // 
             // Template_Video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1449, 789);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.web_video);
-            this.Controls.Add(this.btn_play);
-            this.Controls.Add(this.txt_videoLink);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template_Video";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template_Video";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_videoLink;
-        private FontAwesome.Sharp.IconButton btn_play;
         private System.Windows.Forms.WebBrowser web_video;
         private FontAwesome.Sharp.IconButton btn_exit;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.PictureBox picboxPelicula;
+        public FontAwesome.Sharp.IconPictureBox iconRecomendado;
     }
 }

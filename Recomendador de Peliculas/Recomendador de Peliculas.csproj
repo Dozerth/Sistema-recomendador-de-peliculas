@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\MoviesBusiness.cs" />
+    <Compile Include="Common\MovieCache.cs" />
     <Compile Include="Common\UserLoginCache.cs" />
     <Compile Include="DAO\ConnectionDB.cs" />
     <Compile Include="DAO\MoviesDAO.cs" />
