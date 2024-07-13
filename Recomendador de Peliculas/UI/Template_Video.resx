@@ -120,4 +120,12 @@
   <metadata name="panelDatos.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="lb_generos.Text" xml:space="preserve">
+    <value>Este es un texto largo de ejemplo sobre laaa descripción de la película
+Se ajsuta conforme se escribe en el q loco
+Aaaaaaaaaa q paso menorrrrrr
+fgddfsgdfsgdfgsdfsgdsfgdfsg
+fdhdfghdgfhhhhhhhhhhhhhhhhhh
+</value>
+  </data>
 </root>

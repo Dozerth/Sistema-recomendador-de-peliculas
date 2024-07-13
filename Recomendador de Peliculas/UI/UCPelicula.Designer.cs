@@ -92,6 +92,7 @@
             // 
             // pictureBox_impeli
             // 
+            this.pictureBox_impeli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox_impeli.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_impeli.Image")));
             this.pictureBox_impeli.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_impeli.Name = "pictureBox_impeli";

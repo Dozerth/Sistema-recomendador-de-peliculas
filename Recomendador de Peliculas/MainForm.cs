@@ -14,7 +14,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Recomendador_de_Peliculas.UI;
 using Recomendador_de_Peliculas.DAO;
 using Recomendador_de_Peliculas.DTO;
-
+using Recomendador_de_Peliculas.Business;
+using Recomendador_de_Peliculas.Common;
 namespace Recomendador_de_Peliculas
 {
     public partial class MainForm : Form
@@ -148,6 +149,7 @@ namespace Recomendador_de_Peliculas
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            lb_user.Text = UserLoginCache.Username;
             flowLayout_categorias.Margin = new Padding(10);
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
@@ -156,7 +158,7 @@ namespace Recomendador_de_Peliculas
                     .second-row {position: absolute; top: 0px; left: 0; right: 0; bottom: 0; background-color: red }
                     .second-row iframe {display: block; position: absolute; width: 100%; height: 100%; border: none;}</style>";
             html += "<div class='second-row'>";
-            html += string.Format("<iframe id='video' src='https://www.youtube.com/embed/{0}' allowfullscreen></iframe>", video1);
+            html += string.Format("<iframe id='video' src='https://www.youtube.com/embed/{0}' allowfullscreen></iframe>", "I0_qFoptZ4Y");
             html += "</div></head></html>";
             this.web_video_Principal1.DocumentText = html;     
         }

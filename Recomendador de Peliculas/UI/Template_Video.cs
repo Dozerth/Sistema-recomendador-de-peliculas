@@ -21,9 +21,9 @@ namespace Recomendador_de_Peliculas.UI
             this.picboxPelicula.Load(MovieCache.Image);
             LoadMovieTrailer(MovieCache.Trailer);
             this.lblTitulo.Text = MovieCache.Title;
-            this.lblDescripcion.Text = MovieCache.Description;
+            this.lb_generos.Text = MovieCache.Description;
             this.iconRecomendado.Visible = MovieCache.Recommended;
-            this.lblActores.Text = "Actores: " + MovieCache.Actors;
+            this.lb_descripcion.Text = "Actores: " + MovieCache.Actors;
         }
 
         private void LoadMovieTrailer(string trailer)
@@ -45,6 +45,11 @@ namespace Recomendador_de_Peliculas.UI
             Template_Qualification Open = new Template_Qualification();
             Open.ShowDialog();
             this.Close();
+        }
+
+        private void picboxPelicula_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
