@@ -51,7 +51,7 @@ namespace Recomendador_de_Peliculas
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
             //Load movies per genre in the system
-            LoadLastMovies();
+            LoadMainMovies();
         }        
 
         #region Structures
@@ -339,21 +339,30 @@ namespace Recomendador_de_Peliculas
         {
         }
 
-        private void LoadLastMovies()
+        private void LoadMainMovies()
         {
             List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByYear(2024, 10);
             LoadMoviesInPanel(flowLayoutultimapelis, peliculas);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(4, 10);
+            LoadMoviesInPanel(panelRecomendados, peliculas, true);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(1, 10);
+            LoadMoviesInPanel(panelAnimacion, peliculas);
+            peliculas = moviesDAO.RetrieveMoviesByGenre(2, 10);
+            LoadMoviesInPanel(panelFamilia, peliculas);
         }
 
-        private void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas)
+        private void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas, bool recommended = false)
         {
+            Random rnd = new Random();
             foreach (MoviesDTO pelicula in peliculas)
             {
+                if (recommended = false && rnd.Next(0,6) == 4) { recommended = true; } 
                 UCPelicula ucPelicula = new UCPelicula();
                 ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
                 ucPelicula.lblNombrePeli.Text = pelicula.Title;
                 ucPelicula.lblAnio.Text = pelicula.Year;
-                ucPelicula.iconRecomendado.Visible = false;
+                ucPelicula.iconRecomendado.Visible = recommended;
+                ucPelicula.iconRecomendado.BringToFront();
                 ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
                 ucPelicula.Width = 216;
                 ucPelicula.Height = 291;

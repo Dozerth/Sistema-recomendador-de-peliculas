@@ -56,11 +56,11 @@
             this.lb_ultimos_estrenos = new System.Windows.Forms.Label();
             this.flowLayoutultimapelis = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_recomenda = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelRecomendados = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelAnimacion = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelFamilia = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -265,11 +265,11 @@
             this.flowLayoutPeli.Controls.Add(this.lb_ultimos_estrenos);
             this.flowLayoutPeli.Controls.Add(this.flowLayoutultimapelis);
             this.flowLayoutPeli.Controls.Add(this.lb_recomenda);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPeli.Controls.Add(this.panelRecomendados);
             this.flowLayoutPeli.Controls.Add(this.label3);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPeli.Controls.Add(this.panelAnimacion);
             this.flowLayoutPeli.Controls.Add(this.label4);
-            this.flowLayoutPeli.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPeli.Controls.Add(this.panelFamilia);
             this.flowLayoutPeli.Location = new System.Drawing.Point(43, 76);
             this.flowLayoutPeli.Name = "flowLayoutPeli";
             this.flowLayoutPeli.Size = new System.Drawing.Size(1302, 561);
@@ -513,17 +513,17 @@
             this.lb_recomenda.TabIndex = 17;
             this.lb_recomenda.Text = "Tambien Te Recomendamos";
             // 
-            // flowLayoutPanel1
+            // panelRecomendados
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelRecomendados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 1077);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.panelRecomendados.AutoScroll = true;
+            this.panelRecomendados.BackColor = System.Drawing.Color.Transparent;
+            this.panelRecomendados.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelRecomendados.Location = new System.Drawing.Point(3, 1077);
+            this.panelRecomendados.Name = "panelRecomendados";
+            this.panelRecomendados.Size = new System.Drawing.Size(1334, 335);
+            this.panelRecomendados.TabIndex = 18;
             // 
             // label3
             // 
@@ -537,15 +537,15 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Animacion";
             // 
-            // flowLayoutPanel2
+            // panelAnimacion
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 1494);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel2.TabIndex = 20;
+            this.panelAnimacion.AutoScroll = true;
+            this.panelAnimacion.BackColor = System.Drawing.Color.Transparent;
+            this.panelAnimacion.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelAnimacion.Location = new System.Drawing.Point(3, 1494);
+            this.panelAnimacion.Name = "panelAnimacion";
+            this.panelAnimacion.Size = new System.Drawing.Size(1334, 335);
+            this.panelAnimacion.TabIndex = 20;
             // 
             // label4
             // 
@@ -561,17 +561,17 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Para ver en Familia";
             // 
-            // flowLayoutPanel4
+            // panelFamilia
             // 
-            this.flowLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelFamilia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 1911);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1334, 335);
-            this.flowLayoutPanel4.TabIndex = 22;
+            this.panelFamilia.AutoScroll = true;
+            this.panelFamilia.BackColor = System.Drawing.Color.Transparent;
+            this.panelFamilia.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelFamilia.Location = new System.Drawing.Point(3, 1911);
+            this.panelFamilia.Name = "panelFamilia";
+            this.panelFamilia.Size = new System.Drawing.Size(1334, 335);
+            this.panelFamilia.TabIndex = 22;
             // 
             // MainForm
             // 
@@ -621,11 +621,11 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutultimapelis;
         public System.Windows.Forms.Label lb_recomenda;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel panelRecomendados;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel panelAnimacion;
         public System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel panelFamilia;
         private FontAwesome.Sharp.IconButton btn_animacion;
         private FontAwesome.Sharp.IconButton btn_aventura;
         private FontAwesome.Sharp.IconButton Btn_accion;
