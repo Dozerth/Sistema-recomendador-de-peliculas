@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Recomendador_de_Peliculas.UI;
+using Recomendador_de_Peliculas.DAO;
 
 
 namespace Recomendador_de_Peliculas.UI
@@ -19,7 +20,8 @@ namespace Recomendador_de_Peliculas.UI
         {
             InitializeComponent();
         }
-        
+        UserDAO Service_userDAO = new UserDAO();
+        Login Open = new Login();
         #region Mover_Panel
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -47,6 +49,26 @@ namespace Recomendador_de_Peliculas.UI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_Entrar_Click(object sender, EventArgs e)
+        {
+            if (TxtUser.Text.Equals("") || TxtPassword.Text.Equals("") || txt_email.Text.Equals(""))
+            {
+                MessageBox.Show("POR FAVOR INGRESE SU CORREO ELECTRONICO, NOMBRE DE USUARIO Y UNA CONTRASEÑA A REGISTRAR", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (Service_userDAO.ValidateExistence(TxtUser.Text, txt_email.Text) == false)
+            {
+                TxtUser.Text = "";
+            }
+            else
+            {
+                Service_userDAO.CreateUser(TxtUser.Text, txt_email.Text, TxtPassword.Text);
+                MessageBox.Show("EL USUARIO A SIDO CREADO EXISTOSAMENTE, BIENVEIDO A MOVIAI "+TxtUser+"", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Service_userDAO.ConectarUser(TxtUser.Text);
+                this.Hide();
+                Open.ShowDialog();       
+            }
         }
     }
 }

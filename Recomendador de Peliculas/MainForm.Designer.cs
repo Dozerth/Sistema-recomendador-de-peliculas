@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelTop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_name_user = new System.Windows.Forms.Label();
+            this.lb_user = new System.Windows.Forms.Label();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
@@ -73,7 +73,7 @@
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(14)))), ((int)(((byte)(38)))));
             this.panelTop.Controls.Add(this.pictureBox1);
-            this.panelTop.Controls.Add(this.lb_name_user);
+            this.panelTop.Controls.Add(this.lb_user);
             this.panelTop.Controls.Add(this.btnExit);
             this.panelTop.Controls.Add(this.btnMaximize);
             this.panelTop.Controls.Add(this.btnMinimize);
@@ -94,16 +94,16 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // lb_name_user
+            // lb_user
             // 
-            this.lb_name_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_name_user.AutoSize = true;
-            this.lb_name_user.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name_user.Location = new System.Drawing.Point(1038, 38);
-            this.lb_name_user.Name = "lb_name_user";
-            this.lb_name_user.Size = new System.Drawing.Size(85, 23);
-            this.lb_name_user.TabIndex = 3;
-            this.lb_name_user.Text = "usuarios";
+            this.lb_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_user.AutoSize = true;
+            this.lb_user.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_user.Location = new System.Drawing.Point(1038, 38);
+            this.lb_user.Name = "lb_user";
+            this.lb_user.Size = new System.Drawing.Size(85, 23);
+            this.lb_user.TabIndex = 3;
+            this.lb_user.Text = "usuarios";
             // 
             // btnExit
             // 
@@ -611,7 +611,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPeli;
         private System.Windows.Forms.Label lb_buscar;
         private FontAwesome.Sharp.IconButton btn_buscar;
-        private System.Windows.Forms.Label lb_name_user;
+        private System.Windows.Forms.Label lb_user;
         public System.Windows.Forms.Label lb_seccion_name;
         private System.Windows.Forms.FlowLayoutPanel flowLayout_categorias;
         public System.Windows.Forms.Label lb_ultimos_estrenos;

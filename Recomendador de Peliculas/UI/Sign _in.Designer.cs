@@ -35,7 +35,7 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -121,7 +121,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_email);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -150,24 +150,24 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(118, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 16);
+            this.label3.Size = new System.Drawing.Size(125, 16);
             this.label3.TabIndex = 214;
             this.label3.Text = "Nombre de Usuario";
             // 
-            // textBox1
+            // txt_email
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(124, 249);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(231, 32);
-            this.textBox1.TabIndex = 212;
+            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
+            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_email.Location = new System.Drawing.Point(124, 249);
+            this.txt_email.Multiline = true;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_email.Size = new System.Drawing.Size(231, 32);
+            this.txt_email.TabIndex = 212;
             // 
             // label2
             // 
@@ -177,7 +177,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
             this.label2.Location = new System.Drawing.Point(121, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(118, 16);
             this.label2.TabIndex = 211;
             this.label2.Text = "Correo Electronico";
             // 
@@ -210,7 +210,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(96, 618);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 209;
             this.label1.Text = "Ya Tengo Cuenta";
             // 
@@ -283,7 +283,7 @@
             this.label19.ForeColor = System.Drawing.SystemColors.Window;
             this.label19.Location = new System.Drawing.Point(121, 416);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 16);
+            this.label19.Size = new System.Drawing.Size(76, 16);
             this.label19.TabIndex = 203;
             this.label19.Text = "Contraseña";
             // 
@@ -295,7 +295,7 @@
             this.label20.ForeColor = System.Drawing.SystemColors.Window;
             this.label20.Location = new System.Drawing.Point(121, 298);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(126, 16);
+            this.label20.Size = new System.Drawing.Size(125, 16);
             this.label20.TabIndex = 202;
             this.label20.Text = "Nombre de Usuario";
             // 
@@ -332,6 +332,7 @@
             this.Btn_Entrar.Text = "REGISTRARSE";
             this.Btn_Entrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Entrar.UseVisualStyleBackColor = false;
+            this.Btn_Entrar.Click += new System.EventHandler(this.Btn_Entrar_Click);
             // 
             // pictureBox3
             // 
@@ -419,7 +420,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
     }

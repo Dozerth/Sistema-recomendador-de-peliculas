@@ -10,7 +10,7 @@ namespace Recomendador_de_Peliculas.DAO
 {
     public abstract class ConnectionDB
     {
-        protected MySqlConnection connection = new MySqlConnection("Server=localhost;Database=sistema_recomendador; UserID=root; Password=$Dach.3012");
+        protected MySqlConnection connection = new MySqlConnection("Server=localhost;Database=sistema_recomendador; UserID=root; Password=abuela12*");
         //We can get the data for the connection to db from App.config file
         //private readonly string connectionString;
         //public ConnectionDB()

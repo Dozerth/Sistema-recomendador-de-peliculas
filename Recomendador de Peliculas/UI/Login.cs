@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Recomendador_de_Peliculas.UI;
+using Recomendador_de_Peliculas.DAO;
 
 
 namespace Recomendador_de_Peliculas.UI
@@ -21,6 +22,7 @@ namespace Recomendador_de_Peliculas.UI
         }
         Sign__in Open = new Sign__in();
         MainForm open_mainForm = new MainForm();
+        UserDAO Service_User = new UserDAO();
         #region Mover_Panel
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -53,8 +55,26 @@ namespace Recomendador_de_Peliculas.UI
 
         private void Btn_Entrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            open_mainForm.ShowDialog();
+            if (TxtUser.Text.Equals("") || TxtPassword.Text.Equals(""))
+            {
+                MessageBox.Show("POR FAVOR INGRESE UN USUARIO Y UNA CONTRASEÑA", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (Service_User.Login(TxtUser.Text, TxtPassword.Text) == false)
+            {
+                TxtPassword.Text = "";
+            }
+            else
+            {
+                Service_User.ConectarUser(TxtUser.Text);
+                this.Hide();
+                open_mainForm.Show();
+                open_mainForm.FormClosed += cerrarSesion;
+            }         
+        }
+        private void cerrarSesion(object cerrar, FormClosedEventArgs e)
+        {
+            TxtUser.Text = "";
+            TxtPassword.Text = "";
             this.Show();
         }
     }
