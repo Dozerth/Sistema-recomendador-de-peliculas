@@ -14,8 +14,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Recomendador_de_Peliculas.UI;
 using Recomendador_de_Peliculas.DAO;
 using Recomendador_de_Peliculas.DTO;
-using Recomendador_de_Peliculas.Business;
-using Recomendador_de_Peliculas.Common;
 
 namespace Recomendador_de_Peliculas
 {
@@ -151,6 +149,7 @@ namespace Recomendador_de_Peliculas
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            lb_user.Text = UserLoginCache.Username;
             flowLayout_categorias.Margin = new Padding(10);
             string html = "<html><head>";
             html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
