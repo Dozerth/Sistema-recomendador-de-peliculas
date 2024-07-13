@@ -12,9 +12,14 @@ namespace Recomendador_de_Peliculas.Business
 {
     public class MoviesBusiness
     {
-        private string YOUTUBE_BASE_PATH = "https://www.youtube.com/watch?v";
-        private string CURRENT_DIRECTORY = System.IO.Directory.GetCurrentDirectory();
-        private string IMAGES_BASE_PATH = "../../../Recursos/Images/";
+        //PROPERTIES
+        private static string _YOUTUBE_BASE_PATH = "https://www.youtube.com/watch?v=";
+        private static string _CURRENT_DIRECTORY = System.IO.Directory.GetCurrentDirectory();
+        private static string _IMAGES_BASE_PATH = "../../../Recursos/Images/";
+
+        public static string YOUTUBE_BASE_PATH { get => _YOUTUBE_BASE_PATH; }
+        public static string CURRENT_DIRECTORY { get => _CURRENT_DIRECTORY; }
+        public static string IMAGES_BASE_PATH { get => _IMAGES_BASE_PATH;  }
 
         public void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas, bool recommended = false)
         {
@@ -23,6 +28,7 @@ namespace Recomendador_de_Peliculas.Business
             {
                 if (recommended == false && rnd.Next(0, 11) == rnd.Next(0, 11)) { recommended = true; }
                 UCPelicula ucPelicula = new UCPelicula();
+                //Graphical modifications
                 ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
                 ucPelicula.lblNombrePeli.Text = pelicula.Title;
                 ucPelicula.lblAnio.Text = pelicula.Year;
@@ -32,6 +38,15 @@ namespace Recomendador_de_Peliculas.Business
                 ucPelicula.Width = 216;
                 ucPelicula.Height = 291;
                 ucPelicula.Margin = new Padding(12);
+                //Internal modifiers for video template
+                ucPelicula.Title = pelicula.Title;
+                ucPelicula.Year = pelicula.Year;
+                ucPelicula.Trailer = pelicula.Link;
+                ucPelicula.Image = pelicula.Image;
+                ucPelicula.Actors = pelicula.Actors;
+                ucPelicula.Description = pelicula.Description;
+                ucPelicula.Recommended = recommended;
+
                 panel.Controls.Add(ucPelicula);
             }
         }
