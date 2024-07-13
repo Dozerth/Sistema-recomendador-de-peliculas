@@ -504,7 +504,7 @@
             this.flowLayoutultimapelis.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutultimapelis.Location = new System.Drawing.Point(3, 647);
             this.flowLayoutultimapelis.Name = "flowLayoutultimapelis";
-            this.flowLayoutultimapelis.Size = new System.Drawing.Size(1262, 335);
+            this.flowLayoutultimapelis.Size = new System.Drawing.Size(1262, 352);
             this.flowLayoutultimapelis.TabIndex = 16;
             // 
             // lb_recomenda
@@ -512,7 +512,7 @@
             this.lb_recomenda.AutoSize = true;
             this.lb_recomenda.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_recomenda.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_recomenda.Location = new System.Drawing.Point(3, 1005);
+            this.lb_recomenda.Location = new System.Drawing.Point(3, 1022);
             this.lb_recomenda.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.lb_recomenda.Name = "lb_recomenda";
             this.lb_recomenda.Size = new System.Drawing.Size(336, 31);
@@ -526,9 +526,9 @@
             this.panelRecomendados.AutoScroll = true;
             this.panelRecomendados.BackColor = System.Drawing.Color.Transparent;
             this.panelRecomendados.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelRecomendados.Location = new System.Drawing.Point(3, 1064);
+            this.panelRecomendados.Location = new System.Drawing.Point(3, 1081);
             this.panelRecomendados.Name = "panelRecomendados";
-            this.panelRecomendados.Size = new System.Drawing.Size(1262, 335);
+            this.panelRecomendados.Size = new System.Drawing.Size(1262, 352);
             this.panelRecomendados.TabIndex = 18;
             // 
             // label3
@@ -536,7 +536,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(3, 1422);
+            this.label3.Location = new System.Drawing.Point(3, 1456);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 31);
@@ -548,9 +548,9 @@
             this.panelAnimacion.AutoScroll = true;
             this.panelAnimacion.BackColor = System.Drawing.Color.Transparent;
             this.panelAnimacion.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelAnimacion.Location = new System.Drawing.Point(3, 1481);
+            this.panelAnimacion.Location = new System.Drawing.Point(3, 1515);
             this.panelAnimacion.Name = "panelAnimacion";
-            this.panelAnimacion.Size = new System.Drawing.Size(1262, 335);
+            this.panelAnimacion.Size = new System.Drawing.Size(1262, 352);
             this.panelAnimacion.TabIndex = 20;
             // 
             // label4
@@ -560,7 +560,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(3, 1839);
+            this.label4.Location = new System.Drawing.Point(3, 1890);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(231, 31);
@@ -574,9 +574,9 @@
             this.panelFamilia.AutoScroll = true;
             this.panelFamilia.BackColor = System.Drawing.Color.Transparent;
             this.panelFamilia.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelFamilia.Location = new System.Drawing.Point(3, 1898);
+            this.panelFamilia.Location = new System.Drawing.Point(3, 1949);
             this.panelFamilia.Name = "panelFamilia";
-            this.panelFamilia.Size = new System.Drawing.Size(1262, 335);
+            this.panelFamilia.Size = new System.Drawing.Size(1262, 352);
             this.panelFamilia.TabIndex = 22;
             // 
             // MainForm

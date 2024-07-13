@@ -46,11 +46,12 @@
             this.lblNombrePeli.AutoSize = true;
             this.lblNombrePeli.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePeli.Location = new System.Drawing.Point(3, 252);
+            this.lblNombrePeli.MaximumSize = new System.Drawing.Size(210, 0);
             this.lblNombrePeli.MinimumSize = new System.Drawing.Size(210, 22);
             this.lblNombrePeli.Name = "lblNombrePeli";
-            this.lblNombrePeli.Size = new System.Drawing.Size(210, 22);
+            this.lblNombrePeli.Size = new System.Drawing.Size(210, 44);
             this.lblNombrePeli.TabIndex = 2;
-            this.lblNombrePeli.Text = "Nombre de la pelicy";
+            this.lblNombrePeli.Text = "Nombre de la peliaaaacul";
             this.lblNombrePeli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -111,7 +112,7 @@
             this.Controls.Add(this.lblNombrePeli);
             this.Controls.Add(this.pictureBox_impeli);
             this.Name = "UCPelicula";
-            this.Size = new System.Drawing.Size(216, 291);
+            this.Size = new System.Drawing.Size(216, 302);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).EndInit();

@@ -39,7 +39,7 @@ namespace Recomendador_de_Peliculas.Business
                 ucPelicula.iconRecomendado.Visible = recommended;
                 ucPelicula.iconRecomendado.BringToFront();
                 ucPelicula.Width = 216;
-                ucPelicula.Height = 291;
+                ucPelicula.Height = 302;
                 ucPelicula.Margin = new Padding(12);
                 //Internal modifiers for video template
                 ucPelicula.Title = pelicula.Title;

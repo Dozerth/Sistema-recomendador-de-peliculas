@@ -14,6 +14,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Recomendador_de_Peliculas.UI;
 using Recomendador_de_Peliculas.DAO;
 using Recomendador_de_Peliculas.DTO;
+using Recomendador_de_Peliculas.Common;
+using Recomendador_de_Peliculas.Business;
 
 namespace Recomendador_de_Peliculas
 {

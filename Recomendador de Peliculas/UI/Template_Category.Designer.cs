@@ -41,7 +41,7 @@
             this.flowLayoutAnimacion.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutAnimacion.Location = new System.Drawing.Point(87, 95);
             this.flowLayoutAnimacion.Name = "flowLayoutAnimacion";
-            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1284, 622);
+            this.flowLayoutAnimacion.Size = new System.Drawing.Size(1284, 549);
             this.flowLayoutAnimacion.TabIndex = 17;
             // 
             // lb_category_name
