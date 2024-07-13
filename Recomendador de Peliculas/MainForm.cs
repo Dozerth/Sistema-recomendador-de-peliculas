@@ -341,9 +341,13 @@ namespace Recomendador_de_Peliculas
 
         private void LoadLastMovies()
         {
-            List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByGenre(1, 10);
+            List<MoviesDTO> peliculas = moviesDAO.RetrieveMoviesByYear(2024, 10);
+            LoadMoviesInPanel(flowLayoutultimapelis, peliculas);
+        }
 
-            foreach(MoviesDTO pelicula in peliculas)
+        private void LoadMoviesInPanel(FlowLayoutPanel panel, List<MoviesDTO> peliculas)
+        {
+            foreach (MoviesDTO pelicula in peliculas)
             {
                 UCPelicula ucPelicula = new UCPelicula();
                 ucPelicula.CambiarColorFondo(Color.FromArgb(70, 39, 117));
@@ -354,8 +358,8 @@ namespace Recomendador_de_Peliculas
                 ucPelicula.Width = 216;
                 ucPelicula.Height = 291;
                 ucPelicula.Margin = new Padding(12);
-                flowLayoutultimapelis.Controls.Add(ucPelicula);
-            }            
+                panel.Controls.Add(ucPelicula);
+            }
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
