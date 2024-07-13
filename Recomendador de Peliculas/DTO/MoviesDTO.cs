@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recomendador_de_Peliculas.DTO
 {
-    public class MovieDTO
+    public class MoviesDTO
     {
         int _ID;
         string _Title;

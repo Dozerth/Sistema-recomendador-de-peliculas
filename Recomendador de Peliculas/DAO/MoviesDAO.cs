@@ -49,9 +49,9 @@ namespace Recomendador_de_Peliculas.DAO
 
         #region Retrieve
 
-        public MovieDTO RetrieveMoviesByID(int ID)
+        public MoviesDTO RetrieveMoviesByID(int ID)
         {
-            MovieDTO movies = new MovieDTO();
+            MoviesDTO movies = new MoviesDTO();
             try
             {
                 connection.Open();
@@ -86,9 +86,9 @@ namespace Recomendador_de_Peliculas.DAO
             return movies;
         }
 
-        public List<MovieDTO> RetrieveMoviesByName(string name)
+        public List<MoviesDTO> RetrieveMoviesByName(string name)
         {
-            List<MovieDTO> movies = new List<MovieDTO>();
+            List<MoviesDTO> movies = new List<MoviesDTO>();
             try
             {
                 connection.Open();
@@ -105,7 +105,7 @@ namespace Recomendador_de_Peliculas.DAO
                 {
                     while (reader.Read())
                     {
-                        movies.Add(new MovieDTO
+                        movies.Add(new MoviesDTO
                         {
                             ID = reader.GetInt32(0),
                             Title = reader.GetString(1),
@@ -128,26 +128,27 @@ namespace Recomendador_de_Peliculas.DAO
             return movies;
         }
 
-        public List<MovieDTO> RetrieveMoviesByGenre(int IDgenre)
+        public List<MoviesDTO> RetrieveMoviesByGenre(int IDgenre, int limit)
         {
-            List<MovieDTO> movies = new List<MovieDTO>();
+            List<MoviesDTO> movies = new List<MoviesDTO>();
             try
             {
                 connection.Open();
 
-                string consult = "SELECT p.peliculas_ID, p.titulo, p.fecha, p.link, p.imagen FROM peliculas p INNER JOIN peliculas_categorias c ON c.ID_pelicula = p.peliculas_ID  WHERE c.ID_categoria=@IDGenre GROUP BY p.peliculas_ID, p.titulo HAVING COUNT(distinct c.ID_categoria) = 1";
+                string consult = "SELECT p.peliculas_ID, p.titulo, p.fecha, p.link, p.imagen FROM peliculas p INNER JOIN peliculas_categorias c ON c.ID_pelicula = p.peliculas_ID  WHERE c.ID_categoria=@IDGenre GROUP BY p.peliculas_ID, p.titulo HAVING COUNT(distinct c.ID_categoria) = 1 LIMIT @Limit";
 
                 //CONFIGURING COMMAND
                 cmd.Connection = connection;
                 cmd.Parameters.Clear();
                 cmd.CommandText = consult;
                 cmd.Parameters.AddWithValue("@IDGenre", IDgenre);
+                cmd.Parameters.AddWithValue("@Limit", limit);
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        movies.Add(new MovieDTO
+                        movies.Add(new MoviesDTO
                         {
                             ID = reader.GetInt32(0),
                             Title = reader.GetString(1),
