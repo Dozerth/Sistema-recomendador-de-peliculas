@@ -29,28 +29,65 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panelDatos;
+            this.lblActores = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.web_video = new System.Windows.Forms.WebBrowser();
             this.btn_exit = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.picboxPelicula = new System.Windows.Forms.PictureBox();
             this.iconRecomendado = new FontAwesome.Sharp.IconPictureBox();
+            this.picboxPelicula = new System.Windows.Forms.PictureBox();
             this.panelLateral = new System.Windows.Forms.Panel();
+            this.panelLatSuperior = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelMovie = new System.Windows.Forms.Panel();
-            this.panelLatSuperior = new System.Windows.Forms.Panel();
-            this.lblActores = new System.Windows.Forms.Label();
             panelDatos = new System.Windows.Forms.Panel();
+            panelDatos.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).BeginInit();
             this.panelLateral.SuspendLayout();
+            this.panelLatSuperior.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelMovie.SuspendLayout();
-            this.panelLatSuperior.SuspendLayout();
-            panelDatos.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelDatos
+            // 
+            panelDatos.Controls.Add(this.lblActores);
+            panelDatos.Controls.Add(this.lblDescripcion);
+            panelDatos.Dock = System.Windows.Forms.DockStyle.Top;
+            panelDatos.Location = new System.Drawing.Point(0, 318);
+            panelDatos.Name = "panelDatos";
+            panelDatos.Size = new System.Drawing.Size(242, 467);
+            panelDatos.TabIndex = 7;
+            // 
+            // lblActores
+            // 
+            this.lblActores.AutoSize = true;
+            this.lblActores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblActores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblActores.Location = new System.Drawing.Point(0, 70);
+            this.lblActores.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblActores.Name = "lblActores";
+            this.lblActores.Padding = new System.Windows.Forms.Padding(9);
+            this.lblActores.Size = new System.Drawing.Size(237, 44);
+            this.lblActores.TabIndex = 8;
+            this.lblActores.Text = "Este bloque contiene todos los actores de la pelicula";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDescripcion.Location = new System.Drawing.Point(0, 0);
+            this.lblDescripcion.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Padding = new System.Windows.Forms.Padding(9);
+            this.lblDescripcion.Size = new System.Drawing.Size(236, 70);
+            this.lblDescripcion.TabIndex = 7;
+            this.lblDescripcion.Text = "Este es un texto largo de ejemplo sobre laaa descripción de la película\r\nSe ajsut" +
+    "a conforme se escribe en el q loco\r\nAaaaaaaaaa q paso menorrrrrr\r\n";
             // 
             // web_video
             // 
@@ -101,30 +138,6 @@
             this.panel1.Size = new System.Drawing.Size(215, 250);
             this.panel1.TabIndex = 6;
             // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescripcion.Location = new System.Drawing.Point(0, 0);
-            this.lblDescripcion.MaximumSize = new System.Drawing.Size(250, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Padding = new System.Windows.Forms.Padding(9);
-            this.lblDescripcion.Size = new System.Drawing.Size(236, 70);
-            this.lblDescripcion.TabIndex = 7;
-            this.lblDescripcion.Text = "Este es un texto largo de ejemplo sobre laaa descripción de la película\r\nSe ajsut" +
-    "a conforme se escribe en el q loco\r\nAaaaaaaaaa q paso menorrrrrr\r\n";
-            // 
-            // picboxPelicula
-            // 
-            this.picboxPelicula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picboxPelicula.Location = new System.Drawing.Point(0, 0);
-            this.picboxPelicula.Name = "picboxPelicula";
-            this.picboxPelicula.Size = new System.Drawing.Size(215, 250);
-            this.picboxPelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxPelicula.TabIndex = 8;
-            this.picboxPelicula.TabStop = false;
-            // 
             // iconRecomendado
             // 
             this.iconRecomendado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -140,6 +153,16 @@
             this.iconRecomendado.TabIndex = 8;
             this.iconRecomendado.TabStop = false;
             // 
+            // picboxPelicula
+            // 
+            this.picboxPelicula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picboxPelicula.Location = new System.Drawing.Point(0, 0);
+            this.picboxPelicula.Name = "picboxPelicula";
+            this.picboxPelicula.Size = new System.Drawing.Size(215, 250);
+            this.picboxPelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxPelicula.TabIndex = 8;
+            this.picboxPelicula.TabStop = false;
+            // 
             // panelLateral
             // 
             this.panelLateral.Controls.Add(panelDatos);
@@ -149,6 +172,16 @@
             this.panelLateral.Name = "panelLateral";
             this.panelLateral.Size = new System.Drawing.Size(242, 788);
             this.panelLateral.TabIndex = 8;
+            // 
+            // panelLatSuperior
+            // 
+            this.panelLatSuperior.Controls.Add(this.panel1);
+            this.panelLatSuperior.Controls.Add(this.btn_exit);
+            this.panelLatSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLatSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelLatSuperior.Name = "panelLatSuperior";
+            this.panelLatSuperior.Size = new System.Drawing.Size(242, 318);
+            this.panelLatSuperior.TabIndex = 6;
             // 
             // panelTop
             // 
@@ -168,39 +201,6 @@
             this.panelMovie.Size = new System.Drawing.Size(1144, 729);
             this.panelMovie.TabIndex = 10;
             // 
-            // panelLatSuperior
-            // 
-            this.panelLatSuperior.Controls.Add(this.panel1);
-            this.panelLatSuperior.Controls.Add(this.btn_exit);
-            this.panelLatSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLatSuperior.Location = new System.Drawing.Point(0, 0);
-            this.panelLatSuperior.Name = "panelLatSuperior";
-            this.panelLatSuperior.Size = new System.Drawing.Size(242, 318);
-            this.panelLatSuperior.TabIndex = 6;
-            // 
-            // panelDatos
-            // 
-            panelDatos.Controls.Add(this.lblActores);
-            panelDatos.Controls.Add(this.lblDescripcion);
-            panelDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            panelDatos.Location = new System.Drawing.Point(0, 318);
-            panelDatos.Name = "panelDatos";
-            panelDatos.Size = new System.Drawing.Size(242, 467);
-            panelDatos.TabIndex = 7;
-            // 
-            // lblActores
-            // 
-            this.lblActores.AutoSize = true;
-            this.lblActores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblActores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblActores.Location = new System.Drawing.Point(0, 70);
-            this.lblActores.MaximumSize = new System.Drawing.Size(250, 0);
-            this.lblActores.Name = "lblActores";
-            this.lblActores.Padding = new System.Windows.Forms.Padding(9);
-            this.lblActores.Size = new System.Drawing.Size(237, 44);
-            this.lblActores.TabIndex = 8;
-            this.lblActores.Text = "Este bloque contiene todos los actores de la pelicula";
-            // 
             // Template_Video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,16 +214,16 @@
             this.Name = "Template_Video";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template_Video";
+            panelDatos.ResumeLayout(false);
+            panelDatos.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconRecomendado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPelicula)).EndInit();
             this.panelLateral.ResumeLayout(false);
+            this.panelLatSuperior.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelMovie.ResumeLayout(false);
-            this.panelLatSuperior.ResumeLayout(false);
-            panelDatos.ResumeLayout(false);
-            panelDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
