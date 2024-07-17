@@ -135,7 +135,7 @@ namespace Recomendador_de_Peliculas.DAO
             {
                 connection.Open();
 
-                string consult = "SELECT p.peliculas_ID, p.titulo, p.fecha, p.link, p.imagen FROM peliculas p INNER JOIN peliculas_categorias c ON c.ID_pelicula = p.peliculas_ID  WHERE c.ID_categoria=@IDGenre GROUP BY p.peliculas_ID, p.titulo HAVING COUNT(distinct c.ID_categoria) = 1 LIMIT @Limit";
+                string consult = "SELECT p.peliculas_ID, p.titulo, p.fecha, p.link, p.imagen FROM peliculas p INNER JOIN peliculas_categorias c ON c.ID_pelicula = p.peliculas_ID  WHERE c.ID_categoria=@IDGenre GROUP BY p.peliculas_ID, p.titulo HAVING COUNT(distinct c.ID_categoria) = 1 ORDER BY rand() LIMIT @Limit";
 
                 //CONFIGURING COMMAND
                 cmd.Connection = connection;
@@ -178,7 +178,7 @@ namespace Recomendador_de_Peliculas.DAO
             {
                 connection.Open();
 
-                string consult = "SELECT * FROM peliculas WHERE fecha >= @Year LIMIT @Limit";
+                string consult = "SELECT * FROM peliculas WHERE fecha >= @Year ORDER BY rand() LIMIT @Limit";
 
                 //CONFIGURING COMMAND
                 cmd.Connection = connection;

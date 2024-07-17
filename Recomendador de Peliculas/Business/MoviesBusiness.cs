@@ -38,8 +38,8 @@ namespace Recomendador_de_Peliculas.Business
                 ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
                 ucPelicula.iconRecomendado.Visible = recommended;
                 ucPelicula.iconRecomendado.BringToFront();
-                ucPelicula.Width = 216;
-                ucPelicula.Height = 302;
+                ucPelicula.Width = 288;
+                ucPelicula.Height = 372;
                 ucPelicula.Margin = new Padding(12);
                 //Internal modifiers for video template
                 ucPelicula.Title = pelicula.Title;
@@ -73,8 +73,8 @@ namespace Recomendador_de_Peliculas.Business
                 ucPelicula.lblAnio.Text = pelicula.Year;
                 ucPelicula.CambiarImagen(CURRENT_DIRECTORY + IMAGES_BASE_PATH + pelicula.Image);
                 ucPelicula.iconRecomendado.Visible = false;
-                ucPelicula.Width = 216;
-                ucPelicula.Height = 291;
+                ucPelicula.Width = 288;
+                ucPelicula.Height = 372;
                 ucPelicula.Margin = new Padding(12);
                 //Internal modifiers for video template
                 ucPelicula.Title = pelicula.Title;

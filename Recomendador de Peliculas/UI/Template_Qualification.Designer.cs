@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_exit = new FontAwesome.Sharp.IconButton();
             this.lb_category_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -40,32 +39,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
-            this.btn_exit.FlatAppearance.BorderSize = 0;
-            this.btn_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(53)))), ((int)(((byte)(179)))));
-            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btn_exit.IconColor = System.Drawing.SystemColors.Window;
-            this.btn_exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_exit.IconSize = 30;
-            this.btn_exit.Location = new System.Drawing.Point(6, 23);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(59, 35);
-            this.btn_exit.TabIndex = 19;
-            this.btn_exit.UseVisualStyleBackColor = false;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
             // lb_category_name
             // 
             this.lb_category_name.AutoSize = true;
             this.lb_category_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.lb_category_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_category_name.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_category_name.Location = new System.Drawing.Point(130, 65);
+            this.lb_category_name.Location = new System.Drawing.Point(173, 80);
+            this.lb_category_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_category_name.Name = "lb_category_name";
-            this.lb_category_name.Size = new System.Drawing.Size(517, 29);
+            this.lb_category_name.Size = new System.Drawing.Size(631, 36);
             this.lb_category_name.TabIndex = 20;
             this.lb_category_name.Text = "¡ Tu Opinion es importante para nosostros !";
             // 
@@ -75,9 +58,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(107, 145);
+            this.label1.Location = new System.Drawing.Point(143, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(583, 58);
+            this.label1.Size = new System.Drawing.Size(711, 72);
             this.label1.TabIndex = 21;
             this.label1.Text = "¿Nos gustaria saber que Calificacion le darias al \r\n    Trailer de la pelicula qu" +
     "e acabas de mirar?";
@@ -92,12 +76,14 @@
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(165, 259);
+            this.iconButton4.Location = new System.Drawing.Point(220, 319);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(64, 35);
+            this.iconButton4.Size = new System.Drawing.Size(85, 43);
             this.iconButton4.TabIndex = 30;
             this.iconButton4.Text = "1";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton6
             // 
@@ -109,12 +95,14 @@
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(298, 333);
+            this.iconButton6.Location = new System.Drawing.Point(397, 410);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(161, 35);
+            this.iconButton6.Size = new System.Drawing.Size(215, 43);
             this.iconButton6.TabIndex = 31;
             this.iconButton6.Text = "No me Gusto";
             this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // iconButton1
             // 
@@ -126,12 +114,14 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(257, 259);
+            this.iconButton1.Location = new System.Drawing.Point(343, 319);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(64, 35);
+            this.iconButton1.Size = new System.Drawing.Size(85, 43);
             this.iconButton1.TabIndex = 32;
             this.iconButton1.Text = "2";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -143,12 +133,14 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(349, 259);
+            this.iconButton2.Location = new System.Drawing.Point(465, 319);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(64, 35);
+            this.iconButton2.Size = new System.Drawing.Size(85, 43);
             this.iconButton2.TabIndex = 33;
             this.iconButton2.Text = "5";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton3
             // 
@@ -160,12 +152,14 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(550, 259);
+            this.iconButton3.Location = new System.Drawing.Point(733, 319);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(64, 35);
+            this.iconButton3.Size = new System.Drawing.Size(85, 43);
             this.iconButton3.TabIndex = 34;
             this.iconButton3.Text = "10";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton5
             // 
@@ -177,27 +171,30 @@
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(449, 259);
+            this.iconButton5.Location = new System.Drawing.Point(599, 319);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(64, 35);
+            this.iconButton5.Size = new System.Drawing.Size(85, 43);
             this.iconButton5.TabIndex = 34;
             this.iconButton5.Text = "8";
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(61)))));
-            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Location = new System.Drawing.Point(8, 7);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 438);
+            this.panel1.Size = new System.Drawing.Size(1048, 539);
             this.panel1.TabIndex = 35;
             // 
             // Template_Qualification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
@@ -206,9 +203,9 @@
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_category_name);
-            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Template_Qualification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template_Qualification";
@@ -218,8 +215,6 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btn_exit;
         public System.Windows.Forms.Label lb_category_name;
         public System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton4;

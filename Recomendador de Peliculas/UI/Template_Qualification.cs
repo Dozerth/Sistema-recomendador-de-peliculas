@@ -17,9 +17,42 @@ namespace Recomendador_de_Peliculas.UI
             InitializeComponent();
         }
 
+        #region Buttons
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
     }
 }
